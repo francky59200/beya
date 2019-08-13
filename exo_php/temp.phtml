@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exo php</title>
+</head>
+<body>
+	<p>le jour ou,il fait 22 est <?=implode("/", $jours)?></p>
+	<p>la temperature minimale est <?=$tmin?></p>
+	<p> la temperature maximale est <?=$tmax?></p>
+	<p>la temperature moyenne est <?=$moyenne?></p>
+	<p>la temperature au 10 juin est <?=$tem_du_jour?></p>
+	<p> combien de jours il fera<?=$cpt?></p>
+	<p>nous somme le <?=$datefr?> et il est <?=$heure?></p>
+	<h1>bonjour</h1>
+  <?php if($hour>4 && $hour<16):?>
+  	<p>BONJOUR</p>
+  	<?php else:?>
+  		<p>BONSOIR</p>
+  	<?php endif;?>
+  	<p><?=colume(7,3)?></p>
+  	<p><?=colume(4,5)?></p>
+  	<p><?=colume(12,12)?></p>
+
+  	
+
+	
+
+</body>
+</html>

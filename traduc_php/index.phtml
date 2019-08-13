@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traducteur</title>
+</head>
+<body>
+	<h2>Mon traducteur</h2>
+	<p><?=$traduit?></p><a href="localhost/traduc_php/index.php">nouvelle traduction</a>
+<form action="index.php" method="post">
+	<p><input type="text" name="nom"></p>
+	<p><select name="traduire">
+			<option value="anglaisfrançais">anglais=>français</option>
+			<option value="françaisanglais">français=>anglais</option>
+	    </select></p>
+	    <button>valider</button>
+</form>
+</body>
+</html>

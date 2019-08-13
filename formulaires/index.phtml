@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>les formulaires</title>
+</head>
+<body>
+<form action="index.php" method="post">
+	<p><input type="text" name="prenom"></p>
+	<p><textarea name="message" rows="8" cols="45"> votre message</textarea>
+		<p><select name="pays">
+			<option value="france">france</option>
+			<option value="italie">italie</option>
+			<option value="belgique">belgique</option>
+			<option value="espagne">espagne</option>
+			<option value="bresil">bresil</option>
+		</select></p>
+		<p>voulez vous recevoir notre abonnement<input type="checkbox" name="news"><label for="news">oui</label></p>
+		<p>aimez vous les frites?<input type="radio" name="frites" value="oui" checked="oui"></p>
+			<p><input type="radio" name="frites" value="nom">non</p>
+			<button>valider</button>
+</form>
+</body>
+</html>
+

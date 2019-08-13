@@ -1,0 +1,325 @@
+/* Style généraux */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.2rem;
+}
+h3 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: underline;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+.clear {
+  clear: both;
+}
+.button {
+  cursor: pointer;
+  text-align: center;
+  padding: 1.5% 3%;
+  border-radius: 5px;
+  color: #FFF;
+  border: 1px solid #304D66;
+  background: #304D66;
+  transition: all 0.3s
+}
+.button:hover {
+  color: black;
+  background: #FFF;
+}
+
+/* Style du header */
+
+header {
+  text-align: center;
+  background-image: url('../img/fond_header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid black;
+  box-shadow: 2px 2px 2px black;
+  margin-bottom: 2%;
+  padding: 1%;
+}
+header img {
+  width: 40%;
+  margin: auto;
+  transition: all 0.5s;
+}
+header img:hover {
+  transform: scale(1.1);
+}
+header h1 {
+  color: white;
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* Style de la page d'acceuil */
+
+#index {
+  display: flex;
+  justify-content: space-between;
+}
+#index h2 {
+  font-size: 1.5rem;
+}
+#last_articles {
+  color: white;
+  flex-basis: 29%;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px #304D66;
+  padding: 1%;
+  border-radius: 5px;
+  background: #304D66;
+  height: 100%;
+}
+#last_articles a {
+  color: white;
+}
+#last_articles h2 {
+  text-align: center;
+  text-shadow: 1px 1px 1px white;
+}
+#promu {
+  flex-basis: 69%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#promu h2 {
+  flex-basis: 100%;
+}
+#promu article {
+  flex-basis: 31%;
+}
+.promu img {
+  width: 100%;
+  height: 18rem;
+}
+.promu img:hover {
+  transform: scale(1.1) rotateZ(5deg);
+}
+.promu h2,
+#promu h2 {
+  text-align: center;
+}
+.promu p {
+  text-align: justify;
+}
+.promu a {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+.bulle {
+  padding: 1.5% 3%;
+  border-radius: 10px;
+  color: #FFF;
+  border: 1px solid #304D66;
+  background: #304D66;
+}
+
+/* Style de la page article */
+
+#article img {
+  float: left;
+  width: 40%;
+  margin-right: 3%;
+  margin-bottom: 2%;
+}
+#article a {
+  display: inline-block;
+  padding: 1%;
+  margin: 0.7%;
+}
+#article h2 {
+  text-align: center;
+}
+#commForm {
+  display: none;
+}
+#tableauCommentaires {
+  width: 100%;
+  border: 1px solid #304D66;
+  border-collapse: collapse;
+}
+#tableauCommentaires td,
+#tableauCommentaires th {
+  border: 1px solid #304D66;
+  padding: 1%;
+}
+#tableauCommentaires th {
+  background: #304D66;
+  color: white;
+}
+#tableauCommentaires th:not(:last-child) {
+  border-right: 1px solid white;
+}
+#tableauCommentaires tr:nth-child(even) td:not(:last-child) {
+  border-right: 1px solid white;
+}
+#tableauCommentaires tr:nth-child(even) {
+  background: #304D66;
+  color: white;
+}
+
+.commForm p {
+ display: flex;
+}
+.commForm p label {
+  flex-basis: 10%;
+}
+.commForm p input,
+.commForm p textarea {
+  flex-basis: 50%;
+  padding: 0.5%;
+  border: 1.5px solid #304D66;
+  border-radius: 3px;
+}
+#ajoutComm {
+  padding: 0.5% 2%;
+}
+.erreur,
+.confirmComm {
+  color: #304D66;
+  font-weight: bold;
+}
+/* Style du footer */
+
+footer {
+  color: white;
+  display: flex;
+  align-items: center;
+  background: #304D66;
+  border-top: 1px solid black;
+  margin-top: 2%;
+  padding: 1%;
+}
+footer img {
+  margin: auto 2%;
+  width: 30%;
+  float: left;
+}
+
+
+/*///////////////*/
+/*//// ADMIN ////*/
+/*///////////////*/
+
+/* Connection */
+.connectAdmin p {
+ display: flex;
+}
+.connectAdmin p label {
+  flex-basis: 10%;
+}
+.connectAdmin p input {
+  flex-basis: 30%;
+  padding: 0.5%;
+  border: 1.5px solid #304D66;
+  border-radius: 3px;
+}
+.connectAdmin button {
+  padding: 0.5% 2%;
+}
+
+/* Navigation */
+#navAdmin {
+  background-color: #304D66;
+  font-size: 1.5rem;
+  padding: 0.5%;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px white;
+  border-radius: 5px;
+}
+#navAdmin a {
+  color: white;
+}
+#navAdmin ul {
+  display: flex;
+  justify-content: space-around;
+}
+#navAdmin ul li {
+  list-style-type: none;
+}
+
+/* Tableau de bord */
+#moderer, #statistiques{
+  border: 2px solid #304D66;
+  padding: 2%;
+}
+#tableauGestionComm th {
+  background: #304D66;
+  color: white;
+}
+#tableauGestionComm th:not(:last-child) {
+  border-right: 1px solid white;
+}
+#publication span {
+  cursor: pointer;
+}
+#publication span:hover {
+  text-decoration: underline;
+}
+#statistiques > article {
+  border: 1px solid #304D66;
+  padding: 1%;
+  margin: 1%;
+}
+#statistiques > article > article:not(:last-child) {
+  border-bottom: 1px solid #304D66;
+}
+#statistiques{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#gestion_art_comm{
+  margin-top: 2%;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Gestion articles et commentaires */
+.ajoutModifArt {
+  margin-bottom: 3%;
+}
+#tableauGestionArticles,
+#tableauGestionComm {
+  border: 1px solid #304D66;
+  border-collapse: collapse;
+  margin-bottom: 3%;
+}
+#tableauGestionArticles td,
+#tableauGestionComm td,
+#tableauGestionArticles th,
+#tableauGestionComm th {
+  border: 1px solid #304D66;
+  height: 5rem;
+  text-align: center;
+  padding: 0.2rem;
+}
+#tableauGestionArticles img {
+  width: 100%;
+}
+.button_light {
+  padding: 0.5% 2%;
+}

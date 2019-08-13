@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>exo csv</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div id="container">
+    <form action="supprimer.php" method="post">
+        <ul>
+        <?php foreach ($liste as $key => $sous_table): ?>
+
+            <input type="checkbox" value="<?=$key?>" name="suppr[]"><?=$sous_table[0]?>:
+                <?=$sous_table[1]?>:
+                <?=$sous_table[2]?>:
+                <?=$sous_table[3]?>:
+                <?=$sous_table[4]?>:
+                <?=$sous_table[5]?><br>
+            <?php endforeach;?>
+    </ul>
+     <button>supprimer</button>
+    </form>
+     <h2>carnet d'adresse</h2>
+     <form action="ajouter.php" method="post">
+     	<fieldset>
+     <legend>Les adresses à Mamie</legend>
+    <p class="talign">
+  	<label for="nom">Nom:</label>
+    <input type="text" name="nom">
+    </p>
+    <p class="align">
+    <label for="nom">Prenom:</label>
+    <input type="text" name="prenom"><br>
+    </p>
+    <p class="align">
+    <label for="tel">telephone:</label>
+    <input type="number" name="telephone"><br>
+    </p>
+    <p class="align">
+    <label for="nom">adresse:</label>
+    <input type="text" name="adresse"><br>
+    </p>
+    <p class="align">
+    <label for="nom">ville:</label>
+    <input type="text" name="ville"><br>
+    </p>
+    <p class="align">
+    <label for="nom">anniversaire:</label>
+    <input type="number" name="anniversaire"><br>
+    </p>
+    <button>ajouter</button>
+</fieldset>
+   </form>
+</div>
+</body>
+</html>

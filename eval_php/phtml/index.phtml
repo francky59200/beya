@@ -1,0 +1,34 @@
+<main id="index" class="container">
+  <section id="last_articles">
+    <h2><i class="fas fa-newspaper"></i> Les derniers articles </h2>
+    <article class="last_articles">
+      <?php foreach ($articles as $article): ?>
+        <p><a href="article.php?id=<?= $article['id'] ?>"><i class="fas fa-angle-right"></i> <?= substr($article['titre'], 0, 40)."..." ?></a></p>
+      <?php endforeach; ?>
+    </article>
+
+    <h2><i class="fas fa-comments"></i> Les derniers commentaires</h2>
+    <article class="last_comm">
+      <?php foreach ($commentaires as $commentaire): ?>
+        <p><i class="fas fa-angle-right"></i> <?= substr($commentaire['commentaire'], 0, 40)."..." ?></p>
+      <?php endforeach; ?>
+    </article>
+  </section>
+
+  <section id="promu">
+  <?php foreach ($promus as $promu): ?>
+    <article class="promu">
+      <a href="article.php?id=<?= $promu['id'] ?>"><img src="img/<?= $promu['image'] ?>" alt="<?= $promu['titre'] ?>"></a>
+      <h2><?= $promu['titre'] ?></h2>
+      <p><?= substr($promu['description'], 0, 200)."..." ?></p>
+      <p>
+        <span class="bulle"><i class="fas fa-comments"></i> <span class="nb_comm nb_comm<?= $promu['id'] ?>" data-id='<?= $promu['id'] ?>'><?= $promu['nb_comm'] ?></span></span>
+        <span class="bulle"><i class="fas fa-eye"></i> <span><?= $promu['nb_visites'] ?></span></span>
+      </p>
+      <a class="button" href="article.php?id=<?= $promu['id'] ?>">Lire la suite</a>
+    </article>
+  <?php endforeach; ?>
+  </section>
+
+
+</main>

@@ -1,0 +1,44 @@
+<main>
+	<?php if (isset($_SESSION['admin'])): ?>
+	<section class="container">
+  <?php if (isset($_GET['id'])): ?>
+    <form class="ajoutModifArt" action="modif_article.php?id=<?= $_GET['id'] ?>" method="post" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Modifier un article</legend>
+  <?php else: ?>
+    <form class="ajoutModifArt" action="ajout_article.php" method="post" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Ajouter un article</legend>
+  <?php endif; ?>
+				<p>
+					<label>Titre</label>
+					<input class="name" type="text" name="titre" value="<?=$titre?>"/>
+				</p>
+				<p>
+          <label for="description">Description</label>
+          <span class="editor">
+            <input id="description" type="hidden" name="description" value="<?=$desc?>">
+            <trix-editor input="description"></trix-editor>
+          </span>
+        </p>
+				<p>
+					<label>Photo</label>
+					<input type="file" name="image" value="<?=$image?>">
+				</p>
+				<p>
+					<label>Publié</label>
+					<?php if (isset($_GET['id'])): ?>
+						<input type="radio" name="publie" value="1" <?php if($article["publie"]==1){echo "checked";} ?>>Oui
+						<input type="radio" name="publie" value="0" <?php if($article["publie"]==0){echo "checked";} ?>>Non
+		      <?php else: ?>
+						<input type="radio" name="publie" value="1">Oui
+						<input type="radio" name="publie" value="0">Non
+		      <?php endif; ?>
+				</p>
+				<button class="button button_light" type="submit" value="ajouter">Ajouter</button>
+			</fieldset>
+		</form>
+<?php else:
+	header('location:../admin.php');
+endif; ?>
+</main>
