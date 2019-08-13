@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="style.css">
+
+<div class="container">
+<div id="app" class="box">
+<h1 v-once>{{title }}</h1>
+<h1>{{title + '!!!'}}</h1>
+<h2>{{ title == 'super intro' ? 'bon sens' : 'mauvais sens'}}</h2>
+
+<!-- dans le 2 eme h2 on a creer une condition ternaire dans le vue js
+  ? veut dire si c'est true et : veut dire si c'est false!-->
+
+<button v-on:click="reversTitle">inverser</button>
+<p v-once :title="title">
+  lorem ipsum dolor sit amet
+  <span>{{title}}</span>
+  <span v-html="strongTag"></span>
+</p>
+<p v-html="mediumTag"></p>
+</div>
+
+
+<div id="vue" class="box">
+  <h2>{{title}}</h2>
+  <input type="texte" v-model="title">
+  <!--ici on envoie nos propres parametres grace a la fonction $event ou l'ajout de parametre dans le ()!-->
+  <h3>{{counter}}</h3>
+  <button @click="increase (4, $event)">incrementer</button>
+  <!-- ici on a géreé un évenement grace a la variable v-on et on applique un evenement js on peut le remplacer avec le @!-->
+  <p @mouseover="hover">
+    lorem  ipsum dolor that</br>
+    <strong @mouseover.stop="">Important</strong></br>
+    balise:{{tagname}}
+  </p>
+
+  </div>
+
+
+  <div id="computer" class="box">
+    <input type="checkbox" v-model="succes"><br>
+    <input type="text" v-model="message"><br>
+    {{message}}
+  <div class="ui message" :class="cls">
+    salut les gens
+  </div>
+  </div>
+
+  <div id="style" class="box">
+    <button @click="isBlue = !isBlue">bleu</button>
+    <button @click="isUnderline = !isUnderline">surligner</button>
+    <h3 class="title" :class="[myClass, {red: !isBlue}]">titre 1</h3>
+    <h1 class="title" :class="myClass">titre 2</h1>
+    <h1 class="title" :class="myClass">titre 3</h1>
+    <h1 class="title" :class="color">titre 4</h1>
+    <input type="text" v-model="color">
+  </div>
+
+  <div id="conditions" class="box">
+    <p v-if="show">vue.js est incroyable!</p>
+      <p v-else>Autre texte</p>
+    <button @click="show = !show">montrer</button>
+  </div>
+
+  <div id="templa" class="box">
+    <template v-if="color == 'red'">
+      <p>c'est du rouge</p>
+      <strong> oui c'est du rouge</strong>
+    </template>
+    <p v-else>un autre texte</p>
+  </div>
+
+  <div id="vfor" class="box">
+    <li v-for="name in names">{{name}}</li>
+    <li v-for="(name, i) in names">{{i}}-{{name}}
+
+  </div>
+
+
+  <div id="vforObject" class="box">
+    <div v-for="myObject in names">
+      <h3 v-for="(Object, key, i) in myObject">{{Object}}-{{key}}-({{i}})</h3>
+    </div>
+    <!--boucle d'itération !-->
+    <li v-for="n in 10">{{n*2}}</li>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="main.js"></script>
