@@ -1,0 +1,84 @@
+<head>
+	<meta charset="utf-8">
+	<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="icon" href="img/favicon.png">
+	<title>Massage bien-être: Acceuil - Institut massage - Soins</title>
+</head>
+
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.php"><img src="img/logo.jpg" alt="logo"></a>
+		</div>
+		<nav class="menuburgeur">
+			<div class="menu">
+				<ul>
+					<li><a class="active" href="index.php"><i class="fas fa-house-damage"></i></a></li>
+					<li class="menuTarif"><a href="soins.php">Soins</a>
+						<ul>
+							<li><a href="gestionsoins.php">Gestion de soins</i></a></li>
+							<li><a href="modifsoins.php">Modifier Soins</a></li>
+							<li><a href="ajoutsoins.php">Ajouter un soins</a></li>
+						</ul>
+					</li>
+					<li class="menuTarif"><a href="categories.php">Catégories</a></li>
+					<li class="menulivreDor"><a href="livredor.php">Livre d'or</a></li>
+					<li class="menulivreDor"><a href="listecommande.php">Commandes</a></li>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<h1>Details commandes</h1>
+				<h3>bonjour Admin <a href="admin.html">deconnexion</a></h3>
+				<p><a href="listecommande.php">retour à la page de commande</a>
+			
+				<p><?=$art1['nom_user']?></p>
+				<p><?=$art1['adresse_user']?></p>
+				<p><?=$art1['cp_user']?><?=$art1['ville_user']?></p>
+		
+				<table>
+					<thead>
+						<tr>
+							
+							<th>
+								soins
+							</th>
+							<th>
+								qte
+							</th>
+							<th>
+								pu
+							</th>
+							<th>
+								total
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+						foreach ($article2 as $art2):
+							$total=total(($art2['qte_livre']),($art2['pu_livre']));
+							$somme += $total;
+						?>
+						<tr>
+							<td><?=$art2['nom_soins']?></td>
+							<td><?=$art2['qte_livre']?></td>
+							<td><?=$art2['pu_livre']?></td>
+							<td><?=$total?></td>
+						</tr>
+					<?php endforeach;?>
+					</tbody>
+					<tfoot>
+                    <tr>
+                        <td colspan="3">total</td>
+                        <td><?=$somme?></td>
+                    </tr>
+                </tfoot>
+			</table>
+		</div>
+	</main>

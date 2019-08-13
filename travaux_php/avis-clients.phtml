@@ -1,0 +1,23 @@
+h<?php include ("header.php");?>
+<main>
+		<picture>
+			<source media="(min-width: 1024px)" srcset="img/banner-desktop.jpg">
+			<source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/banner-tablette.jpg">
+			<img src="img/banner-mobile.jpg" alt="banner_Page">
+		</picture>
+		<div id="scroll1">
+			<a href="#top"><img src="img/arrow-top.png" alt="scroll"></a>
+		</div>
+		<div class="container">
+			<h1>Avis clients-soins et sens </h1>
+			<p>Vous avez bénéficié d'un massage ou d'un soin avec Stéphanie Dessart. Vous souhaitez faire part de votre vécu pendant la (ou les) séance(s).</p>
+			<p>Signez le livre d'or et laissez votre avis aux internautes ! Votre avis sera publié après validation par le modérateur du site.</p>
+			<button class="avis">signer le livre d'or</button>
+			<?php foreach ($table_4 as $ta_4):?>
+			<h2> De<?=$ta_4['nom_livre']?> publié le <?=$ta_4['date_livre']?></h2>
+			<p><?=$ta_4['titre_livre']?> <?php start($ta_4['note_livre'])?></p>
+			<p><?=$ta_4['commentaire_livre']?></p>
+			<?php endforeach;?>
+		</div>
+	</main>
+	<?php include ("footer.php");?>

@@ -1,0 +1,31 @@
+.slide{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	align-items: center;
+	text-align: center;
+	margin-left: 20%;
+}
+.slide img{
+	position: absolute;
+	z-index: -100;
+	width: 100%;
+	height: auto;
+	margin-top: 180px;
+}
+ .text{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+div.points{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#container{
+	display: flex;
+	flex-direction: column;
+}
