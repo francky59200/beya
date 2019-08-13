@@ -19,7 +19,7 @@ handleCompt = () =>{
 
 handleDelete =() =>{
   const suppr = this.state.client.slice();
-  const index = suppr.findIndex((client)=> client === client);
+  const index = suppr.findIndex((client)=> client);
   suppr.splice(index, 1);
   this.setState({client:suppr});
 }
