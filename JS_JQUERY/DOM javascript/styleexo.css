@@ -1,0 +1,19 @@
+article {
+	width: 300px;
+	height: 200px;
+	background: pink;
+	margin-bottom: 25px;
+}
+.red {
+	background: red;
+	transition-property: background;
+	transition-duration: 2s;
+}
+.green {
+	background: green;
+	transition-property: background;
+	transition-duration: 1s;
+}
+/*_.hide {
+	display: none;
+}*/

@@ -1,0 +1,13 @@
+img{
+	width: 400px;
+	height: 400px;
+	text-align: center;
+}
+#star{
+	text-align: center;
+}
+button{
+	width: 50px;
+	font-size: 1.1em;
+	font-weight: bold;
+}

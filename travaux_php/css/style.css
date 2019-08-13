@@ -1,0 +1,1020 @@
+/*------------------------Version Mobile du site------------*/
+
+/*------------------------Style Généraux du corp des pages version Mobile------------*/
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #777;
+  background-color: #FFF;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  max-width: 100%;
+}
+
+main {
+  min-height: 420px;
+  margin-bottom: 40px;
+}
+
+body img {
+  max-width: 100%
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/*------------------------Style Généraux des composant du site version Mobile------------*/
+h1, h2, h3 {
+  font-family: 'Bree Serif', serif;
+  color: #DD8B0C;
+}
+
+h1 {
+  font-size: 2.2em;
+  line-height: 1.4em;
+  text-align: justify;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.3em;
+  text-align: justify;
+}
+
+h3 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+
+a {
+  color: #0000CC;
+  text-decoration: none;
+}
+
+button {
+  background-color: #DD8B0C;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+input {
+  padding: 5px;
+}
+
+span {
+  color: red;
+}
+
+.fa-star {
+  color: yellow;
+}
+
+.centre {
+  text-align: center;
+}
+.left{
+  text-align: justify;
+}
+
+.blue {
+  color: blue;
+}
+.new{
+  color: #CC0000;
+}
+.italique{
+  font-style: italic;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+}
+/*------------------------------style du header et du logo version Mobile---------------------*/
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo :hover {
+  opacity: 0.8;
+}
+
+/*--------------------------style de la navigation menu hamburger et le boutton scroll1 version Mobile------------------------------*/
+.menuburgeur {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 100000000000;
+  background-color: white;
+    border-bottom: #DD8B0C solid 1px;
+}
+
+
+.hamburgeurCross {
+  background-color: #fff;
+  line-height: 45px;
+  padding: 5px 15px 5px 15px;
+  margin: 2% auto;
+  color: #DD8B0C;
+  font-size: 1.4rem;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: 1px solid #DD8B0C;
+  text-align: center;
+}
+
+.menu {
+  font-style: italic;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  z-index: 1000000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  display: none;
+}
+
+.menu ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.menu a {
+  display: block;
+  text-decoration: none;
+  color: #DD8B0C;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.menu a.active{
+  color: #824C19;
+}
+.fixmenu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0
+}
+
+
+#scroll1 {
+  position: fixed;
+  width: 42px;
+  height: 42px;
+  bottom: 50px;
+  right: 50px;
+  opacity: 0.5;
+  display: none;
+}
+
+/*------------------------------------style des composants du slide version Mobile-------------------*/
+.slide {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.slide img {
+  max-width: 100%;
+ position: absolute;
+ z-index: -100;
+}
+
+.slide button a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.slide .text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slide h2 {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  text-shadow: 2px 2px 2px #333;
+}
+
+.slide P {
+  display: none;
+}
+
+div.points {
+  display: flex;
+  justify-content: center;
+}
+
+.slide button:hover {
+  background-color: rgba(221, 139, 12, 0.7);
+}
+/*-----------------------------------style footer Version Mobile-------------------*/
+
+footer h4 {
+  color: white;
+}
+
+footer button {
+  padding: 5px;
+  width: 175px;
+  color: #DD8B0C;
+  background-color: white;
+}
+.premier_footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #DD8B0C;
+  color: white;
+  padding: 30px 10px;
+  margin-bottom: 0;
+}
+
+.premier_footer h2 {
+  margin-top: 0;
+  color: white;
+}
+
+.premier_footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.deuxieme_footer {
+  color: #DD8B0C;
+  text-align: center;
+}
+
+
+/*----------------------------style de la page  ACCEUIL Version Mobile----------*/
+.presentation, .promo, .mes_soins, .rdv_cadeau {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.promo h2 {
+  text-align: center;
+  color: white;
+}
+
+.promo {
+  background: url('../img/fond-promo.jpg');
+  padding: 30px;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #333;
+}
+
+.mes_soins button:hover {
+  background: white;
+  color: #DD8B0C;
+  border-color: #DD8B0C;
+}
+
+.rdv_cadeau {
+  border-top: 2px solid #DD8B0C;
+  margin-top: 10px;
+}
+
+.rdv_cadeau h3 {
+  text-align: justify;
+}
+
+/*--------------------------------------Style page A PROPOS Version Mobile----------------------*/
+#propos {
+  display: flex;
+  flex-direction: column;
+}
+
+#propos img {
+  border-radius: 50%;
+}
+
+/*-----------------------------------Page tarifs Version Mobile-------------------------*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: auto;
+  font-size: 0.9rem;
+  margin-bottom: 30%;
+}
+
+th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #DD8B0C;
+}
+
+td {
+  text-align: left;
+  vertical-align: text-top;
+  padding: 5px 10px;
+  border: 1px solid #DD8B0C;
+}
+
+.tarifs {
+  text-align: right;
+}
+
+caption {
+  padding: 3%;
+}
+
+tr:nth-child(even) {
+  background: #FFE6BE;
+}
+th{
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+/*-----------------------------------Page boutique Version Mobile-------------------------*/
+.cheque_cadeau_articles h3{
+font-size: 1rem;
+}
+.liste_envies button {
+  background-color: #CC0000;
+
+  }
+  /*---------------------------------------Page avis clients Version Mobile---------------------------------*/
+
+  .align1, .align2, .align3, .align4, .align5{
+    display: flex;
+    flex-direction: column;
+   }
+   .align5 textarea{
+    width: 100%;
+   }
+
+
+  /*-----------------------------------Page Contact Version Mobile-------------------------*/
+  .renseignements button {
+    padding: 6px 20px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+   border: 0;
+  }
+  .renseignements i{
+    color: #DD8B0C;
+  }
+
+/*---------------------------style page politique de confidentialités Version Mobile---------*/
+  .mentions i{
+    color: #DD8B0C;
+  }
+
+/*---------------------------style page politique de confidentialités Version Mobile---------*/
+
+#politique h2, #politique h3 {
+  text-align: justify;
+}
+
+/*----------------------------------------FIN VERSION Mobile DU SITE----------------------*/
+
+
+
+
+
+/*----------------------------------------VERSION Tablette DU SITE----------------------*/
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+  /*-----------------------------------style general du body version tablette-------------------------*/
+  .container {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 1200px;
+  }
+
+  /*-----------------------------------style du slide version tablette-------------------------*/
+  .slide h2 {
+    font-size: 1.5rem;
+  }
+
+  .slide P {
+    display: block;
+    font-size: 1rem;
+    text-shadow: 2px 2px 2px #333;
+  }
+
+  /*-----------------------------------Page d'acceuil Tablette-------------------------*/
+  .presentation {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .presentation article {
+    width: 56%;
+  }
+
+  .presentation aside {
+    width: 36%;
+    padding-left: 6%;
+  }
+
+  .mes_soins {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+  }
+
+  .mes_soins article {
+    width: 29.33%;
+    padding: 0 1%;
+  }
+
+  .rdv_cadeau {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .prendre_rdv {
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .idee_cadeau {
+    width: 48%;
+    margin-left: 2%;
+  }
+
+  .premier_footer a:hover, .premier_footer a:active {
+    text-decoration: underline;
+    color: white;
+  }
+
+  .premier_footer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .premier_footer_1 {
+    width: 30%;
+    padding: 0 2%;
+  }
+
+  .premier_footer_2 {
+    width: 30%;
+    padding: 0 2%;
+  }
+
+  .premier_footer_3 {
+    width: 30%;
+    padding-left: 0 1%;
+  }
+
+
+  /*----------------------------------------Page avis clients Tablette----------------------*/
+  .avis {
+    margin-left: 78%;
+  }
+
+  /*----------------------------------------Page Boutique Tablette----------------------*/
+  .cheque_cadeau_articles {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cheque_cadeau_articles article {
+    width: 10%;
+    padding: 0 1%;
+  }
+
+  /*----------------------------------------Page Contact Tablette----------------------*/
+  .renseignements {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact {
+    width: 61.5%;
+    margin-right: 2%;
+  }
+  .horaires{
+    width: 35.5%;
+  }
+
+/*----------------------------------------Page Mentions Légales Tablette----------------------*/
+  .mentions {
+    display: flex;
+  }
+
+  .siege_social, .editeur_site, .hebergeur {
+    width: 29.33%;
+    padding: 0 2%;
+  }
+
+  .editeur_site h3{
+    text-align: justify;
+  }
+
+  /*------------------------------------ Page Soins VERSION Tablette-------------------------*/
+
+  .massage_tete picture {
+    float: left;
+    width: 30%;
+  }
+
+  .massage_tete .massage {
+    float: right;
+    width: 65%;
+  }
+
+  .soin_relaxant picture {
+    float: right;
+    width: 30%;
+  }
+
+  .soin_relaxant .relaxant {
+    float: left;
+    width: 65%;
+  }
+
+  .soin_californien picture {
+    float: left;
+    width: 30%;
+  }
+
+  .soin_californien .californien {
+    float: right;
+    width: 65%;
+  }
+
+  .soin_abhyanga picture {
+    float: right;
+    width: 30%;
+  }
+
+  .soin_abhyanga .abhyanga {
+    float: left;
+    width: 75%;
+  }
+
+  .detente_dos picture {
+    float: left;
+    width: 20%;
+  }
+
+  .detente_dos .detente {
+    float: right;
+    width: 60%;
+  }
+
+  .reflexologie_plantaire picture {
+    float: right;
+    width: 30%;
+  }
+
+  .reflexologie_plantaire .plantaire {
+    float: left;
+    width: 65%;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  /*---------------------------------Page A Propos Version Tablette----------*/
+  #propos {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5%;
+  }
+
+  #propos img {
+    border-radius: 50%;
+    padding-left: 3%;
+    float: right;
+    width: 100%;
+  }
+  /*---------------------------------Page tarif Version Tablette-----------------------*/
+  table{
+    width: 60%;
+    margin: 0 auto;
+  }
+  /*-----------------------------------Page ecrire avis Version Tablette-------------------------*/
+  .align1, .align2, .align3, .align4,.aling5{
+  display: flex;
+  flex-direction: row;
+ }
+ .align1 label, .align2 label, .align3 label, .align4 label .align5 label{
+  width: 30%;
+  margin-right: 2%;
+ }
+ .align1 input, .align2 input, .align3 input, .align5 input{
+  width: 60%;
+ }
+.align5 textarea{
+  width: 62%;
+  margin-left: 30%;
+
+ }
+ .note{
+  margin-left: 27%;
+ }
+
+}
+
+/*----------------------------------------Fin Version Tablette----------------------*/
+
+
+
+/*----------------------------------------VERSION Desktop DU SITE----------------------*/
+@media all and (min-width: 1024px) {
+
+  /*-----------------------------------style general du body en ecran 1024px-------------------------*/
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #777;
+    background-color: #FFF;
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  main img {
+    max-width: 100%;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 96%;
+    max-width: 1200px;
+  }
+  h1 {
+  font-size: 2.8em;
+  line-height: 1.4em;
+
+}
+
+h2 {
+  font-size: 1.8em;
+  line-height: 1.3em;
+}
+
+  /*-------------------------------------style des tableaux et formulaires ECRIRE AVIS ET CONTACT------------------------*/
+  .align {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 10%;
+  }
+
+  .name, .email, .telephone {
+    width: 55%;
+  }
+
+  .message {
+    width: 55%;
+  }
+
+  .align12 {
+    padding-right: 40%;
+  }
+
+  .sujet {
+    width: 55%;
+  }
+  /*-----------------------------------Page Contact Version Desktop-------------------------*/
+
+  .renseignements {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact {
+    width: 61.5%;
+    margin-right: 2%;
+  }
+  .horaires{
+    width: 35.5%;
+  }
+  /*-----------------------------------Page ecrire avis Version Desktop-------------------------*/
+   .align1, .align2, .align3, .align4, .aling5{
+  display: flex;
+  flex-direction: row;
+ }
+ .align1 label, .align2 label, .align3 label, .align4 label .align5 label{
+  width: 30%;
+  margin-right: 2%;
+ }
+ .align1 input, .align2 input, .align3 input, .align5 input{
+  width: 60%;
+ }
+ .align5 textarea{
+  width: 61%;
+  margin-left: 31.5%;
+  margin-right: 0;
+ }
+ .note{
+  margin-left: 27%;
+ }
+
+  /*-------------------------------style de navigation de toutes les parties du site----------------------*/
+  .hamburgeurCross {
+    display: none;
+  }
+
+  .menu {
+    font-size: 1.4rem;
+    display: block;
+    font-style: normal;
+  }
+
+  .menu a {
+    transition: All linear 2s;
+  }
+
+  .menu a:hover {
+    transform: scale(1.15);
+    text-decoration: none;
+    color: #824C19;
+  }
+
+  .menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu ul ul ul {
+    position: absolute;
+    width: inherit;
+    background-color: #fff;
+    text-align: justify;
+  }
+
+  .menuTarif ul, .menulivreDor ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menuTarif ul li, .menulivreDor ul li {
+    border-top: #DD8B0C dashed 2px;
+  }
+
+  .menulivreDor ul, .menuTarif ul, .menuTarif ul li:last-child, .menulivreDor ul li:last-child  {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+
+  /*------------------------------------ style du slides en Desktop-------------------------*/
+  .slide button a {
+    font-size: 1.3rem;
+  }
+
+  .slide h2 {
+    font-size: 2rem;
+  }
+
+  .slide P {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 2px #333;
+  }
+
+  /*------------------------------------ Page Soins VERSION Desktop-------------------------*/
+  .massage_tete picture {
+    float: left;
+    width: 20%;
+  }
+
+  .massage_tete .massage {
+    float: right;
+    width: 80%;
+  }
+
+  .soin_relaxant picture {
+    float: right;
+    width: 20%;
+  }
+
+  .soin_relaxant .relaxant {
+    float: left;
+    width: 80%;
+  }
+
+  .soin_californien picture {
+    float: left;
+    width: 20%;
+  }
+
+  .soin_californien .californien {
+    float: right;
+    width: 80%;
+  }
+
+  .soin_abhyanga picture {
+    float: right;
+    width: 20%;
+  }
+
+  .soin_abhyanga .abhyanga {
+    float: left;
+    width: 80%;
+  }
+
+  .detente_dos picture {
+    float: left;
+    width: 20%;
+  }
+
+  .detente_dos .detente {
+    float: right;
+    width: 80%;
+  }
+
+  .reflexologie_plantaire picture {
+    float: right;
+    width: 20%;
+  }
+
+  .reflexologie_plantaire .plantaire {
+    float: left;
+    width: 80%;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  /*-------------------------------------style du corps des articles partie PAGE D'ACCEUIL----------*/
+
+
+  .text p {
+    display: block;
+  }
+
+  .presentation {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .presentation article {
+    width: 56%;
+  }
+
+  .presentation aside {
+    width: 36%;
+    padding-left: 6%;
+  }
+
+  .mes_soins {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+  }
+
+  .mes_soins article {
+    width: 29.33%;
+    padding: 0 1%;
+  }
+
+  .rdv_cadeau {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .prendre_rdv {
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .idee_cadeau {
+    width: 48%;
+    margin-left: 2%;
+  }
+
+  .premier_footer a:hover, .premier_footer a:active {
+    text-decoration: underline;
+    color: white;
+  }
+
+  .premier_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .premier_footer_1 {
+    width: 25%;
+    margin-left: 10%;
+    margin-top:20%;
+  }
+
+  .premier_footer_2 {
+    width: 30%;
+  }
+
+  .premier_footer_3 {
+    width: 25%;
+    margin-right: 10%;
+  }
+  .premier_footer_3_mail{
+    display: flex;
+    align-items: center;
+  }
+  footer button{
+    height:40px;
+    margin-left: 4px;
+  }
+
+  /*------------------------------------Style des articles et icone Avis clients Version Desktop-----------------*/
+  .avis {
+    margin-left: 78%;
+  }
+
+  .fa-star {
+    color: gold;
+  }
+
+  /*-----------------------------Page boutique Version Desktop---------------------------------------*/
+  .boutique {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .liste_envies {
+    width: 30%;
+  }
+
+  .cheque_cadeau_articles {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cheque_cadeau_articles article {
+    width: 29.33%;
+    padding: 0 1%;
+    justify-content: space-between;
+  }
+
+  /*---------------------------------Page A Propos Version Desktop----------*/
+  #propos {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 5%;
+  }
+
+  #propos img {
+    border-radius: 50%;
+    padding-left: 3%;
+    width: 35%;
+  }
+
+  #propos #histoire{
+  width: 60%;
+  }
+
+
+  /*---------------------------------Page Politique de confidentialité  Version Desktop----------*/
+  #politique {
+    margin-bottom: 5%;
+  }
+
+  /*---------------------------------Page mentions legales Version Desktop-----------------------*/
+  .mentions {
+    display: flex;
+  }
+
+  .siege_social, .editeur_site, .hebergeur {
+    width: 29.33%;
+    padding: 0 2%;
+  }
+  .editeur_site h3{
+    text-align: justify;
+  }
+    /*---------------------------------Page tarif Version Desktop-----------------------*/
+   /table{
+      width: 60%;
+      margin: 1% auto;
+    }
+    
+}

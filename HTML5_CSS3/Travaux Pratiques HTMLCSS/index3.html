@@ -1,0 +1,80 @@
+<!Doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>randonnée en montagne</title>
+	<link rel="stylesheet" type="text/css" href="style3.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="icon" type="image/png" href="favicon.ico" />
+</head>
+<body>
+  <header>
+	<div id="navigation">
+		<p><a href="index.html" target="_blank"><img class="roule" src="logo.png" alt="logo"></a></p>
+			<p class="acceuil"><a href="index2.html" target="_blank">Activités</a></p>
+			<p class="acceuil">Agenda</p>
+			<p class="acceuil">conseils pratiques</p>
+			<p class="acceuil"><a href="index4.html" target="_blank">Qui sommes nous</a></p>
+			<p class="acceuil"><a href="index3.html" target="_blank">Nous contacter</a></p>
+			<p class="acceuil"><i class="fas fa-lock"></i> espaces menbres</p>
+	</div>
+	<div id="banniere">
+		<img src="nature.jpg" alt="nature">
+	</div>
+  </header>
+  <main>
+  	<div id="contacte">
+  	<h1>Nous Contacter</h1>
+  	<article>
+  		<h2>Nos Coordonnées</h2>
+  		<p>17 rue camille shlimberg, 68600 colmar</p>
+  		<p>Email:<span>info@randonnee-sauvage.fr</span></p>
+  		<p>telephone: 06 62 72 75 00</p>
+  		<p> Vous pouvez aussi remplir le formulaire ci-dessus.</p>
+  		<p><span>(*)</span> Champs obligatoires</p>
+  	</article>
+  </div>
+  <form method="post" action="traitement.php">
+  	<fieldset>
+        <p class="align">
+        <label for="nom">Nom<span>(*)</span>:</label>
+        <input type="text" name="Nom" id="Nom" />
+        </p>
+        <p class="align">
+        <label for="prenom">Email<span>(*)</span>:</label>
+        <input type="text" name="prenom" id="prenom"/>
+        </p>
+        <p class="align">
+        <label for="email">telephone<span>(*)</span>:</label>
+        <input type="number" name="email" id="email"/>
+        </p>
+        <p class="align">
+        <label for="choix"> Sujet<span>(*)</span></label>
+        <select name="choix" id="choix" placeholder="veuillez faire un choix">
+        	<option value="montagne">montagne</option>
+        	<option value="hivernale">hivernale</option>
+        	<option value="thematique">thematique</option>
+    </select>
+    </p>
+    <p class="align">
+    	<label for="message">message<span>(*)</span></label>
+    	<textarea name="message" id="message" rows="10" cols="40"></textarea>
+    </fieldset>
+    <p>
+    <input type="checkbox" name="conditions"/><label for="conditions">En soumettant ce formulaire j'accepte<span> la politique deconfidentialité</span>du site: j'accepeteque les informations qui en decoulent soit accepter dans le cadre de la relation qui peut en decouler</label>
+   </p>
+   <p>
+    	<button type="submit" value="envoyer"><i class="far fa-paper-plane"></i>          envoyer</button>
+    </p>
+   </form>
+   </main>
+  <footer>
+	<p> Nous contacter- Mentions légales- politique de confidentialité</p>
+	<p><img src="facebook.png" alt="facebook"><img src="twitter.png">
+	<p>2019 randonnée sauvage.tous droits resevrés</p>
+</footer>
+</body>
+</html>

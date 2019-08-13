@@ -1,0 +1,56 @@
+  <body>
+    <main class="container">
+    <?php if (isset($_SESSION['admin'])): ?>
+      <a class="button button_light" href="deconnecte.php">Déconnexion</a>
+    	<h2>Gérer mes articles</h2>
+    	<p><a class="button button_light" href="ajout_article.php">Ajout article</a></p>
+        <table id="tableauGestionArticles" class="container">
+					<thead>
+						<tr>
+							<th>Titre</th>
+							<th>Description</th>
+							<th>Image</th>
+							<th>Date de création</th>
+							<th>Publie</th>
+							<th>Nombre visites</th>
+							<th>Nombre commentaires</th>
+							<th>Actions</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ($articles as $article):?>
+						<tr id="art<?= $article['id'] ?>">
+							<td><?=$article['titre']?></td>
+              <td>
+                <?=substr($article['description'],0, 200)."..."?>
+                <p><a class="button"  href="../article.php?id=<?= $article['id'] ?>">Lire la suite</a></p>
+              </td>
+							<td><img src="../img/<?=$article['image']?>"></td>
+							<td><?= strftime('%d %h %Y', strtotime($article['date_creation']));?></td>
+							<td class="publie<?= $article['id'] ?>">
+                <?php if ($article['publie'] == 1): ?>Oui
+                <?php else: ?>Non
+                <?php endif; ?>
+              </td>
+							<td><?=$article['nb_visites']?></td>
+							<td><?=$article['nb_comm']?></td>
+							<td id="publication">
+              <?php if ($article['publie'] == 0): ?>
+                <span data-id="<?= $article['id'] ?>" class="publication" id="num<?= $article['id']?>">Publier</span><br>
+              <?php else: ?>
+                <span data-id="<?= $article['id'] ?>" class="publication" id="num<?= $article['id']?>">Dépublier</span><br>
+              <?php endif; ?>
+                <span data-id="<?= $article['id'] ?>" class="supprimer" >Supprimer</span>
+                <a href="modif_article.php?id=<?= $article['id'] ?>">Modifer</a>
+							</td>
+						</tr>
+						<?php endforeach;?>
+				</tbody>
+			</table>
+    <?php else:
+      header('location:../admin.php');
+    endif; ?>
+	</main>
+</body>
+<script src="js/publication_article.js"type="text/javascript"></script>
+</html>

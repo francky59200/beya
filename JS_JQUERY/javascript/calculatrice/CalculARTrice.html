@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>TP JAVASCRIPT - CALC-uArte</title>
+	
+	
+	
+	
+	<link rel="stylesheet" href="styles/stylesheet.css">
+	<style>
+	body{
+		margin: 0;
+		padding: 0;
+		height: 100vh;
+		/* background-color: #dcdcdc; */
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		min-height: 100vh;
+		background: linear-gradient(#9198e5, lightblue, #f7f7f7, #ffffff);
+	}
+	.main{
+		width: 418px;
+		background-color: #545454;
+	}
+	
+	form,
+	form > *{
+		margin: 0;
+		padding: 0;
+	}
+	
+	form{
+		width: 418px;
+		border-box: box-sizing;
+	}
+	
+	
+	input[type="button"]{
+		width: 100px;
+		height: 100px;
+		font-size: 35px;
+		margin:0;
+		color: #585858;
+	}
+	input.textecran,
+	input.textecran:hover,
+	input.textecran:active,
+	input.textecran:focus{
+		width: 400px;
+		height: 110px;
+		margin: 0;
+		margin-left: 2px;
+		margin-top:2px;
+		/* pointer: cursor; */
+		cursor: grab;
+		font-size: 80px;
+		background : #cbe0d1;
+		background:#6e6d6d;
+		color: orange;
+		border:none;
+		border: 2px solid #758078;
+		font-family: 'ds-digitalbold';
+		text-align: right;
+		padding-right: 10px;
+	}
+	
+	input.textecran[placeholder]{
+		color: #fff;
+	}
+	
+	.bg{
+		background:linear-gradient(to rigth, red, blue);
+		height: 100vh;
+	}
+	
+	</style>
+	
+</head>
+<body>
+
+
+
+
+
+<div class="main">
+	
+	
+	<form name="form">
+		<input class="textecran" name="textecran" placeholder="0123456789">
+	</form>
+	
+	<table>
+		<tr>
+			<td><input type="button" value="C"></td>
+			<td><input type="button" value="<"></td>
+			<td><input type="button" value="/"></td>
+			<td><input type="button" value="X"></td> 
+		</tr>
+		<tr>
+			<td><input type="button" value="7"></td>
+			<td><input type="button" value="8"></td>
+			<td><input type="button" value="9"></td>
+			<td><input type="button" value="-"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="4"></td>
+			<td><input type="button" value="5"></td>
+			<td><input type="button" value="6"></td>
+			<td><input type="button" value="+"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="1"></td>
+			<td><input type="button" value="2"></td>
+			<td><input type="button" value="3"></td>
+			<td rowspan="2"><input type="button" style="height: 204px" value="="></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="button" style="width: 204px" value="0" ></td>
+			<td><input type="button" value="." ></td>
+		</tr>
+		
+		
+	</table>
+	
+	
+	
+</div>
+
+
+
+
+	
+</body>
+</html>

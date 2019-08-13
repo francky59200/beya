@@ -1,0 +1,111 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size:1em;
+	padding:0;
+	margin:0;
+}
+
+#container{
+	max-width
+	margin
+}
+/*faire disparaitre les liens*/
+nav ul ul {
+	display: none;
+	position: absolute;
+	list-style: none;
+}
+/*bloquer le menu le mettre un padding pour le centrer*/
+nav ul > li:hover ul {
+	display: block;
+	padding-left: 1px;
+}
+/*change le menu*/
+nav > ul{
+display: flex;
+list-style: none;
+justify-content: space-around;
+position: relative;
+margin: 0;
+padding: 0;
+
+}
+
+/*couleur et grosseur de la nav et du menu*/
+nav a {
+	color:white;
+	text-decoration: none;
+	display:block;
+	width:100%;
+	padding:15px 30px;
+	box-sizing: border-box;
+	
+}
+nav a:hover {
+	background-color: red;
+	opacity: 0.2;
+}
+header, nav ul ul {
+	background-color: #00BCD4;
+}
+nav ul ul > li:hover a {
+	border-bottom: 1px solid;
+	opacity: 0.2;
+	padding: 15px 30px;
+}
+
+
+
+
+/*nav > ul {
+	margin: 0;
+	padding: 0;
+}
+nav > ul >li {
+	float: left;
+	position: relative;
+}
+nav li {
+	list-style-type: none;
+}
+.submenu {
+	display: none;
+}
+nav {
+	width: 100%;
+	background-color: red;
+}
+nav > ul::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+nav a {
+	display: inline-block;
+	text-decoration: none;
+}
+nav > ul > li > a {
+	padding: 20px 30px;
+	color: white;
+}
+.submenu {
+	display: none;
+}
+nav li:hover .submenu {
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	padding: 0px;
+}
+.submenu li a{
+	padding: 15px 30px;
+	font-size: 1.5em;
+	color: blue;
+	width: 100px;
+	box-sizing: border-box;
+}
+.submenu li{
+	border-bottom: 1px solid;
+	box-sizing: border-box;
+}*/

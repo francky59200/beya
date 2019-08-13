@@ -1,0 +1,48 @@
+<body>
+  <main class="container">
+  <?php if (isset($_SESSION['admin'])): ?>
+    <a class="button button_light" href="deconnecte.php">Déconnexion</a>
+  	<h2>Gérer mes commentaires</h2>
+      <table id="tableauGestionComm" class="container">
+				<thead>
+					<tr>
+						<th>Pseudo</th>
+						<th>Email</th>
+            <th>Commentaire</th>
+            <th>Titre article</th>
+            <th>date</th>
+						<th>publie</th>
+						<th>Actions</th>
+						</tr>
+				</thead>
+				<tbody>
+				  <?php foreach ($commentaires as $commentaire):?>
+					<tr id="comm<?= $commentaire['id'] ?>">
+						<td><?=$commentaire['pseudo']?></td>
+						<td><?=$commentaire['email']?></td>
+						<td><?=$commentaire['commentaire']?></td>
+						<td><?=$commentaire['titre']?></td>
+						<td><?= strftime('%d %h %Y', strtotime($commentaire['date']));?></td>
+            <td class="publie<?= $commentaire['id']?>">
+              <?php if ($commentaire['publie'] == 1): ?>Oui
+              <?php else: ?>Non
+              <?php endif; ?></td>
+            <td id="publication">
+              <?php if ($commentaire['publie'] == 0): ?>
+                <span data-id="<?= $commentaire['id'] ?>" class="publication" id="num<?= $commentaire['id']?>">Publier</span><br>
+              <?php else: ?>
+                <span data-id="<?= $commentaire['id'] ?>" class="publication" id="num<?= $commentaire['id']?>">Dépublier</span><br>
+              <?php endif; ?>
+                <span data-id="<?= $commentaire['id'] ?>" class="supprimer" >Supprimer</span>
+						</td>
+					</tr>
+				<?php endforeach;?>
+			</tbody>
+		</table>
+  <?php else:
+    header('location:../admin.php');
+  endif; ?>
+	</main>
+</body>
+<script src="js/publication_avis.js"type="text/javascript"></script>
+</html>

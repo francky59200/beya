@@ -1,0 +1,70 @@
+.card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+}
+.card h3, .card p {
+  margin: 0;
+  padding: 0;
+}
+.card h3 {
+  font-size: 1.4em;
+}
+/* Styles de la face avant */
+.front {
+  background-color: transparent;
+}
+.front h3 {
+  color: #FFFFFF;
+  background-color: red;
+  text-shadow: 1px 1px #333;
+  position: absolute;
+  bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+/* Styles de la face arrière */
+.back {
+  background-color: red;
+  color: #FFFFFF;
+}
+.back h3 {
+  margin-top: 35px;
+}
+.back h3, .back p {
+  padding-bottom: 20px;
+}
+.back .infos {
+  padding: 12px;
+}
+.back a.readmore {
+  color: #FFFFFF;
+}
+.front, .back {
+  /* Superposition des 2 faces de la carte */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Empêcher la visibilité par transparence */
+  backface-visibility: hidden;
+  /* Initialisation de la transition */
+  transition: transform 1s ease-in-out;
+}
+/* Cacher la face arrière en lui appliquant une rotation de -180deg */
+.back {
+  transform: rotateX(-180deg);
+}
+/* Inversion des 2 faces */
+.card:hover .front {
+  transform: rotateX(-180deg);
+}
+.card:hover .back {
+  transform: rotateX(0);
+}
+
+
+

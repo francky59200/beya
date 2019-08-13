@@ -1,0 +1,91 @@
+<body>
+  <main class="container">
+  <?php if (isset($_SESSION['admin'])): ?>
+    <h1>Bienvenue <?= $_SESSION['admin'] ?></h1>
+    <a class="button button_light" href="deconnecte.php">Déconnexion</a>
+  	<h2>Tableau de bord</h2>
+    <h3>A Modérer</h3>
+    <section id="moderer">
+      <table id="tableauGestionComm" class="container">
+        <thead>
+          <tr>
+            <th>Pseudo</th>
+            <th>Email</th>
+            <th>Commentaire</th>
+            <th>Titre article</th>
+            <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($commentaires as $commentaire):?>
+          <tr id="comm<?= $commentaire['id'] ?>" class="commValid<?= $commentaire['id'] ?>">
+            <td><?=$commentaire['pseudo']?></td>
+            <td><?=$commentaire['email']?></td>
+            <td><?=$commentaire['commentaire']?></td>
+            <td><?=$commentaire['titre']?></td>
+            <td id="publication">
+              <?php if ($commentaire['publie'] == 0): ?>
+                <span data-id="<?= $commentaire['id'] ?>" class="publication" id="num<?= $commentaire['id']?>">Publier</span><br>
+              <?php else: ?>
+                <span data-id="<?= $commentaire['id'] ?>" class="publication" id="num<?= $commentaire['id']?>">Dépublier</span><br>
+              <?php endif; ?>
+                <span data-id="<?= $commentaire['id'] ?>" class="supprimer" >Supprimer</span>
+						</td>
+          </tr>
+        <?php endforeach;?>
+        </tbody>
+      </table>
+    </section>
+    <h3>Statistiques</h3>
+    <section id="statistiques">
+      <article>
+        <h4>Mes articles les plus vus</h4>
+        <ul>
+          <?php foreach ($articles as $article):?>
+          <li><?=$article['titre']?><br>
+          Nombre de vue(s) : <?=$article['nb_visites']?></li>
+          <?php endforeach;?>
+        </ul>
+    </article>
+    <article id="statArticle">
+      <article>
+        <h4>Nombres article(s) publiés :</h4>
+        <p><i class="fas fa-angle-right"></i> <?=$publArticles['nb_publie']?></p>
+      </article>
+      <article>
+        <h4>Nombres article(s) non publiés :</h4>
+        <p><i class="fas fa-angle-right"></i> <?=$non_publArticles['nb_non_publie']?></p>
+      </article>
+    </article>
+    <article id="commentaires">
+      <article>
+        <h4>Nombre de visite(s) sur le site :</h4>
+        <p id="visites"><i class="fas fa-angle-right"></i> <?= $visites['nb_visiteurs'] ?></p>
+        <p><a class="button reinit" >Réinitialiser</a></p>
+
+      </article>
+      <article>
+        <h4>Nombres de commentaire(s) :</h4>
+        <p><i class="fas fa-angle-right"></i> <span class="nbCommPub"><?=$nb_commentaires['nb_comm']?></span></p>
+      </article>
+      <article>
+        <h4>Nombres de commentaire(s) en attente de validation :</h4>
+        <p><i class="fas fa-angle-right"></i> <span class="nbCommNonPub"><?=$publ_non_commentaires['nb_pucomm']?></span></p>
+      </article>
+      <article>
+        <h4>Nombres de commentaires supprimé(s) :</h4>
+        <p><i class="fas fa-angle-right"></i> <span class="nbCommSuppr"><?= $comm_suppr['compteur']?></span></p>
+      </article>
+    </article>
+    </section>
+    <div id="gestion_art_comm">
+      <a class="button" href="gestion_article.php">Gestion Articles</a>
+      <a class="button" href="gestion_comm.php">Gestion commentaires</a>
+   </div>
+  <?php else:
+    header('location:../admin.php');
+  endif; ?>
+  </main>
+<script src="js/publication_avis.js"type="text/javascript"></script>
+<script src="js/reinit_visites.js"type="text/javascript"></script>
+</body>

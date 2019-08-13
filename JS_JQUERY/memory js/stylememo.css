@@ -1,0 +1,13 @@
+td{
+	border-collapse: collapse;
+	width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+table{
+	display: flex;
+	justify-content: center;
+}
+h1{
+	text-align: center;
+}

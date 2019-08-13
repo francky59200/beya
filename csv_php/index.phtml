@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>csv</title>
+</head>
+<body>
+	<h2>fichier csv</h2>
+	<ul>
+		<?php foreach ($liste as $sous_table): ?>
+			<li><?=$sous_table[1]?>:
+				<?=$sous_table[0]?></li>
+			<?php endforeach;?>
+	</ul>
+
+
+
+    <form action="index.php" method="post">
+	<p><input type="text" name="citation"></p>
+	<p><select name="cat">
+			<option value="humour">humour</option>
+			<option value="vie">vie</option>
+	    </select></p>
+	    <button>ajouter</button>
+	</form>
+</body>
+</html>

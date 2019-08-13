@@ -1,0 +1,48 @@
+<?php include ("header.php");?>
+<main>
+		<picture>
+			<source media="(min-width: 1024px)" srcset="img/banner-desktop.jpg">
+			<source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/banner-tablette.jpg">
+			<img src="img/banner-mobile.jpg" alt="banner_Page">
+		</picture>
+		<div id="scroll1">
+			<a href="#top"><img src="img/arrow-top.png" alt="scroll"></a>
+		</div>
+		<div class="container">
+			<h1>Signer le livre d'or de Soins & Sens</h1>
+			<p>Votre avis sera publié après validation par le modérateur du site.</p>
+			<p><span>(*)</span> Champs obligatoires.</p>
+			<form action="ecrire-avis.php" method="post">
+				<p class="align1">
+					<label>Nom<span>(*)</span></label>
+					<input class="nom" type="text" name="name" size="40">
+				</p>
+				<p id="validNom"></p>
+				<p class="align2">
+					<label>Email<span>(*)</span></label>
+					<input class="email" type="Email" name="email" size="40">
+				</p>
+				<p id="validEmail"></p>
+				<p class="align3">
+					<label>Telephone</label>
+					<input class="tel" type="number" name="telephone" size="40">
+				</p>
+				<p id="validTel"></p>
+				<p class="align4">
+					<label>Note<span>(*)</span></label>
+					<input class="note" type="radio" name="note" value="1">horrible<input type="radio" name="note" value="2">mediocre<input type="radio" name="note" value="3">moyen<input type="radio" name="note" value="4">tres bien<input type="radio" name="note" value="5">excellent</p>
+					<p id="validNote"></p>
+				<p class="align5">
+					<label>Message<span>(*)</span></label>
+					 <textarea class="message" name="message" rows="8" cols="80"></textarea>
+				</p>
+				<p id="validMess"></p>
+			<p><input type="checkbox" name="radio"><span>(*)</span> En soumettant ce formlaire, j'accepte la <a href="politique-de-confidentialite.html">politique de confidentialité</a>du site, j'accepte que les informations saisies spoient exploitées dans le cadre de la relation qui
+				peut en découler.</p>
+			<p class="centre"><button type="submit" class="boutton2" name="boutton2" value="envoyer"><i class="fas fa-paper-plane"></i> envoyer</button></p>
+			<h3><?php if(isset($message)){echo $message;} ?></h3>
+			</form>
+		</div>
+		<script src="main1.js"></script>
+	</main>
+<?php include ("footer.php");?>

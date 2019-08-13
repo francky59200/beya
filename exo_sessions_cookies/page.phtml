@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sesss</title>
+</head>
+<body>
+	<?php if(isset($_SESSION['login'])&& $_SESSION['login']=='titi'):?>
+<p>bonjour<?=$_SESSION['login']?></p>
+<p>lrem isum
+<?php else:?>
+<?php header('location: index.html')?>
+<?php endif;?>
+</body>
+</html>

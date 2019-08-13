@@ -1,0 +1,52 @@
+<main class="container">
+  <section id="article">
+    <h2><?= $article['titre'] ?></h2>
+    <img src="img/<?= $article['image'] ?>" alt="<?= $article['titre'] ?>">
+    <?= $article['description'] ?>
+    <a class="button" id="ecrireComm">Ajouter un commentaire</a>
+    <?php if (isset($_SESSION['admin'])): ?>
+      <a class="button" href="admin/modif_article.php?id=<?= $article['id'] ?>">Modifier cet article</a>
+    <?php endif; ?>
+  </section>
+  <div class="clear"></div>
+
+  <p class="confirmComm"></p>
+  <section id="commForm">
+    <form class="commForm" method="post">
+      <p>
+        <label for="">Nom / Pseudo :</label>
+        <input id="nom" type="text" name="name" value="" required>
+      </p>
+      <p>
+        <label for="">Email :</label>
+        <input id="email" type="email" name="email" value="" required>
+      </p>
+      <p>
+        <label for="">Commentaire :</label>
+        <textarea id="comm" name="comm" rows="8" cols="80" required></textarea>
+      </p>
+      <p class="erreur"></p>
+      <button class="button" data-id="<?= $_GET['id'] ?>" id="ajoutComm" type="button" name="button">Envoyer</button>
+    </form>
+  </section>
+
+  <section>
+    <h3>Commentaires :</h3>
+    <table id="tableauCommentaires">
+      <thead>
+        <th>Date</th>
+        <th>Pseudo</th>
+        <th>Commentaire</th>
+      </thead>
+      <tbody>
+        <?php foreach ($commentaires as $commentaire): ?>
+          <tr>
+            <td><?= $commentaire['date'] ?></td>
+            <td><?= $commentaire['pseudo'] ?></td>
+            <td><?= $commentaire['commentaire'] ?></td>
+          </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+  </section>
+</main>

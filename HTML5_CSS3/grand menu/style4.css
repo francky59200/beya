@@ -1,0 +1,14 @@
+nav ul div.megamenu{
+    display: none;
+}
+nav>ul>li:hover div.megamenu{
+    display: flex;/*pour organiser la div megamenu ...........*/
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;/*...............jusque la*/
+    position: absolute;
+    background-color: lightblue;
+    top: 40px;
+    left: 0;
+    right: 0;
+}

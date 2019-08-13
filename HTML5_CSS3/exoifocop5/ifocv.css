@@ -1,0 +1,115 @@
+s@font-face {
+    font-family: 'cantarelloblique';
+    src: url('Cantarell-Oblique-webfont.eot');
+    src: url('Cantarell-Oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Cantarell-Oblique-webfont.woff2') format('woff2'),
+         url('Cantarell-Oblique-webfont.woff') format('woff'),
+         url('Cantarell-Oblique-webfont.ttf') format('truetype'),
+         url('Cantarell-Oblique-webfont.svg#cantarelloblique') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face { 
+    font-family: 'cac_champagneregular';
+    src: url('cac_champagne-webfont.eot');
+    src: url('cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('cac_champagne-webfont.woff2') format('woff2'),
+         url('cac_champagne-webfont.woff') format('woff'),
+         url('cac_champagne-webfont.ttf') format('truetype'),
+         url('cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+body {
+    font-family: cantarelloblique, sans-serif;
+    color: black;
+    background: url("fondcv.jpg");
+    font-size: 1em;
+    line-height: 1.4em;
+}
+.container {
+    width: 1100px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+#banniere {
+    background: #23CBCD;
+    border-bottom: 30px solid;
+}
+img {
+    border-radius: 50%;
+    border-color: white;
+    padding: 35px 35px;
+}
+header {
+    display: flex;
+    background: #B7E9E8;
+}
+#presentation {
+    width: 75%;
+    padding: 15px 35px;
+    flex-wrap: wrap;
+}
+#star {
+    padding-left: 10px;
+}
+h1 {
+    color: white;
+    font-size: 3rem
+}
+header p  {
+    color: white;
+}
+header h2 {
+    color: white;
+}
+ h2 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+#groupebloc h2  {
+    color: #FCA0A2;
+}
+h3 {
+    font-size: 1.2rem;
+    color: #FCA0A2;
+}
+#groupebloc {
+    display: flex;
+}
+#bloc1 {
+    width: 65%;
+    background: white;
+    padding-left: 35px;
+
+
+}
+#bloc2 {
+    width: 35%;
+    background: #F2F2F2;
+    padding-left: 35px;
+    padding-bottom: 10px;
+
+}
+footer {
+    background: #B7E9E8;
+    text-align: left;
+    padding: 8px;
+}
+.fa-star {
+     color: #FCA0A2;
+}
+nav li {
+    list-style-type
+}
+#etoile nav li {
+    display: flex;
+}
+li::before {
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+content: "\f105";
+color:#DB4442;
+padding-right:10px;
+}

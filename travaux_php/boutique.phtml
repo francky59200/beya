@@ -1,0 +1,40 @@
+<?php include ("header.php");?>
+ <main>
+    <picture>
+      <source media="(min-width: 1024px)" srcset="img/banner-desktop.jpg">
+      <source media="(min-width: 768px) and (max-width: 1023px)" srcset="img/banner-tablette.jpg">
+      <img src="img/banner-mobile.jpg" alt="banner_Page">
+    </picture>
+    <div id="scroll1">
+      <a href="#top"><img src="img/arrow-top.png" alt="scroll"></a>
+    </div>
+    <div class="container">
+      <h1>Boutique</h1>
+      <p>Pensez-y à l'occasion d'un mariage, comme cadeau de naissance ou d'anniversaire, pour la Saint-Valentin, la fête des mères ou la fête des pères, comme cadeau de Noël ou pour les fêtes de fin d'année.</p>
+      <p>Choisissez une prestation dans la boutique ci-dessous. Selon votre choix le bon cadeau est envoyé par mail ou par voie postale à l'adresse souhaitée. Le rendez-vous est pris ensuite par le bénéficiaire. Les bons cadeaux sont valables 6 mois.
+      </p>
+      <p>Voir <a href="tarifs.html"> les conditions générales de vente.</a></p>
+      <div class="boutique">
+        <div class="cheque_cadeau">
+          <h2>Les chéques Cadeaux</h2>
+          <div class="cheque_cadeau_articles">
+            <?php foreach ($article AS $art): ?>
+            <article class="reflexologie1_plantaire">
+              
+              <h3><?=$art['nom_soins']?></h3>
+              <img src=<?=$art['photo_soins']?>>
+              <p><?=$art['prix_soins']?>l'unité</p>
+              <form action="boutique.php?id=<?=$art['id_soins'] ?>&prix=<?=$art['prix_soins']?>" method="post">
+              <span class="new"><i class="fas fa-heart"></i> Ajouter à ma liste d'envie</span>
+              <input type="number" name="qte" value="1" min="1" max="5" id="nmbrRflxPltr">
+              <button id="ajoutRflxPltr"><i class="fas fa-cart-plus"></i></button>
+            </form>
+
+
+            </article>
+            <?php endforeach;?>
+        </div>
+      </div>
+    </div>
+  </main>
+<?php include ("footer.php");?>

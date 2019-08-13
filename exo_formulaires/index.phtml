@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mot de passe</title>
+</head>
+<body>
+    <?php if(password()):?>
+    <img src="Man5.jpg" alt="photo">
+    <p>Acces autorisé uniquement, si vous n'avez pas le mot de passe passez votre chemin</p>
+    <?php else:?>
+    <form action="index.php" method="post">
+  	<label for="pass">veuillez entre un mot de passe:</label>
+    <input type="password" id="pass" name="password">
+    <button>valider</button>
+   </form>
+   <?php endif;?>
+</body>
+</html>

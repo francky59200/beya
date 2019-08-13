@@ -1,0 +1,26 @@
+.title{
+  font-style: italic;
+  font-size: 35px;
+}.blue{
+  color: blue;
+}
+.underline{
+  text-decoration: underline;
+
+}
+.red{
+    color: red;
+
+}
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.box{
+  border: solid;
+  text-align: center;
+}
