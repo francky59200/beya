@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.container{
+  text-align: center;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+button{
+  margin: 0 15px;
+  border-radius: 30px;
+  font-size: 1rem;
+  display: inline;
+}
