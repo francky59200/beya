@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'ds-digitalnormal';
+    src: url('../fonts/ds-digi-webfont.woff2') format('woff2'),
+         url('../fonts/ds-digi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ds-digitalbold';
+    src: url('../fonts/ds-digib-webfont.woff2') format('woff2'),
+         url('../fonts/ds-digib-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ds-digitalitalic';
+    src: url('../fonts/ds-digii-webfont.woff2') format('woff2'),
+         url('../fonts/ds-digii-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ds-digitalbold_italic';
+    src: url('../fonts/ds-digit-webfont.woff2') format('woff2'),
+         url('../fonts/ds-digit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

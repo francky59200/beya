@@ -1,0 +1,21 @@
+article{
+	width: 200px;
+	height: 200px;
+	background: #eee;
+}
+/*#art3{
+	width: 200px;
+	height: 200px;
+	background: #eee;
+}
+#art2{
+	width: 200px;
+	height: 200px;
+	background: #eee;
+}*/
+.blue {
+	color:blue;
+}
+.pink {
+	background-color:pink;
+}

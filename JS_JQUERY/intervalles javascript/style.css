@@ -1,0 +1,9 @@
+article {
+	width: 200px;
+	height: 200px;
+	background-color:#eee;
+	border-radius: 50px;
+}
+.pink {
+	background-color: pink;
+}
