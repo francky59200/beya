@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>les formulaires</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="container">
+	<p>un bon formulaires</p>
+	<form method="post" action="form.php">
+	<fieldset>
+		<legend>coordonnées</legend>
+		<p class="civi">
+		<label for="nom">civilité</label>
+		<input type="radio" name="Civilité" value="Mr">Monsieur
+		<input type="radio" name="Civilité" value="Mme">Madame
+	    </p>
+	    <p class="align">
+        <label for="nom">Nom(*):</label>
+        <input type="text" name="Nom" id="Nom" />
+        </p>
+        <p class="align">
+        <label for="prenom">prenom(*):</label>
+        <input type="text" name="prenom" id="prenom"/>
+        </p>
+        <p class="align">
+        <label for="email">email(*):</label>
+        <input type="text" name="email" id="email"/>
+        </p>
+        <p class="align">
+        <label for="numero">Numero de telephone:</label>
+        <input type="tel" name="numero" id="numero"/>
+        </p>
+    </fieldset>
+        
+	<button class="talign" type="submit" value="envoyer">envoyer</button>
+    </form>
+</div>
+</body>
+</html>

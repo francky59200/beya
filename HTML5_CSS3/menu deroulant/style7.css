@@ -1,0 +1,42 @@
+nav{
+	left: 0;
+	top: 0;
+	bottom: 80%;
+	width: 90px;
+	background-color: #A9A9F5;
+}
+nav ul{
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	line-height: 30px;
+	display: flex;
+	flex-direction: column;
+}
+nav ul li a{
+	display: block;
+}
+nav ul li a:hover{
+	background-color: violet;
+	opacity: 0.5;
+}
+nav ul li:hover ul li{
+	display: block;
+
+}
+nav ul li ul li{
+
+	position: relative;
+	width: 90px;
+	height: 40px;
+	justify-content: flex-start;
+	display: none;
+
+}
+.fa-chevron-circle-down{
+	font-size: 40px;
+	position: relative;
+}
+.fa-chevron-circle-down:hover ul li a{
+	display: block;
+}

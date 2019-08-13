@@ -1,0 +1,25 @@
+#container {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+}
+.align {
+	display: flex;
+	justify-content:space-between;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+}
+p {
+	flex-basis: 30%;
+
+}
+.talign{
+	margin: 10px 10px;
+	justify-content: center;
+}
+.civi {
+	text-align: left;
+	margin-left: 40px;
+}

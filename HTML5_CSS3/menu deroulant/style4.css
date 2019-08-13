@@ -1,0 +1,50 @@
+body{
+	background: violet;
+}
+header nav ul  {
+	list-style-type: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+}
+header nav ul li{
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: white;
+}
+header nav ul li a{
+ display: block;
+}
+header nav ul li a:hover{
+	background-color: grey;
+	opacity: 0.6;
+}
+header nav ul li ul li{
+	display: none;
+}
+header nav ul li:hover ul li{
+	display: block;
+	
+}
+.sub-menu ul{
+	transition: 1s max-height 0.3s;
+}
+.sub-menu1 ul li ul{
+	display: none;
+	position: relative;
+}
+.sub-menu1  ul li:hover ul{
+	display: block;
+	margin-left: 170px;
+	margin-top: -70px;
+	padding: 30px;
+	float: 200px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+}

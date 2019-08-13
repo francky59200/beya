@@ -1,0 +1,111 @@
+nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 30;
+  width: 60px;  /*taille de l'icone*/
+  background-color: #A9A9F5;
+}
+nav a, nav p{
+  color: black;
+  text-decoration: none;
+}
+nav li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li:hover{
+  background-color: #CED8F6;
+}
+nav>ul>li:first-child{
+  background-color: #0489B1;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav>ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+nav>ul>li{
+  height: 60px;
+  width: 60px;
+  background-color: #A9A9F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icone{   /*pour les icones    */
+  text-align: center;
+  font-size: 1.5rem;
+  flex: 8;
+  box-sizing: border-box;
+  align-self: center;
+}
+.tex1{   /*pour le texte    */
+  text-align: right;
+  flex: 12;
+  padding-right: 5px;
+  box-sizing: border-box;
+  align-self: center;
+}
+nav ul.niv1{
+  transition: all 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #A9A9F5;
+  width: 200px;
+  z-index: 50;
+  transform: translate(-200px);
+}
+nav:hover ul.niv1{
+  transform: translate(0);
+}
+nav ul.niv1>li:not(:last-child){
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 200px;
+}
+nav ul.niv1>li:first-child{
+  background-color: #0489B1;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+nav ul.niv1>li:last-child{
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background-color: #A9A9F5;
+}
+ul.niv2{
+  display: flex;
+  flex-direction: column;
+  background-color: #A9A9F5;
+  z-index: -10;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: all 1s;
+}
+ul.niv1>li:hover ul.niv2{
+  left: 200px;
+}
+ul.niv2 li{
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  height: 60px;
+  width: 200px;
+  z-index: -10;
+}

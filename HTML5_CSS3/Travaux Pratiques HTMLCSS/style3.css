@@ -1,0 +1,85 @@
+/*_________________corps de la page_______*/
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #555;
+	background-color: #FFF;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+main {
+	min-width: 900px;
+	max-width: 1100px;
+	margin: auto;
+	text-align: justify;
+}
+#banniere img {
+	max-width: 100%;
+}
+
+
+
+/*_________________header et navigation_______*/
+header p {
+	list-style-type: none;
+	font-family: 'Oswald' ,sans-serif;
+	color: #C50019;
+}
+header p:hover {
+	color: #4C2200;
+}
+#navigation {
+	display: flex;
+	justify-content: space-around;
+}
+form {
+	width: 70%;
+	margin: auto;
+	text-align: center;
+}
+span {
+	color: #C50019;
+}
+h2 {
+	color: #C50019;
+}
+h1 {
+	color: #C50019;
+}
+.align {
+	display: flex;
+	justify-content:space-between;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+label {
+	padding-left: 20px;
+}
+input {
+	padding-right: 60px;
+}
+select {
+	padding-right: 130px;
+}
+button {
+	background-color: #C50019;
+	color: white;
+	padding: 10px 40px;
+}
+a {
+	text-decoration: none;
+	color: #C50019;
+}
+a:hover {
+	color: #4C2200;
+}
+ header p {
+	text-decoration: none;
+	animation-timing-function: linear;
+	transition-duration: 3s;
+}
+footer {
+	text-align: center;
+	padding: 10px 40px;
+	color: white;
+	background-image: linear-gradient(#E57373, #C50019);
+}

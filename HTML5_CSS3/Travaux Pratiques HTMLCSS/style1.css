@@ -1,0 +1,121 @@
+/*_________________corps de la page_______*/
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #555;
+	background-color: #FFF;
+	font-size: 1em;
+	line-height: 1.5em;
+}
+main {
+	min-width: 900px;
+	max-width: 1100px;
+	margin: auto;
+	text-align: justify;
+}
+#banniere img {
+	max-width: 100%
+}
+
+
+/*_________________header et navigation_______*/
+header p {
+	list-style-type: none;
+	font-family: 'Oswald' ,sans-serif;
+	color: #C50019;
+}
+header p:hover {
+	color: #4C2200;
+}
+#navigation {
+	display: flex;
+	justify-content: space-around;
+}
+.acceuil {
+	padding: 20px 10px;
+}
+/*____________section du corps de page_________*/
+#introduction {
+	display: flex;
+	border-top: 
+}
+#introduction article {
+	width: 60%;
+}
+#introduction aside {
+	width: 30%;
+	padding-left: 10%;
+}
+#animateurs article {
+     flex-basis: 50%;
+     padding-left: 3%;
+     padding-right: 3%;
+}
+#animateurs{
+	display: flex;
+	justify-content: space-between;
+}
+#animateurs img {
+	max-width: 100%
+}
+.centre {
+	text-align: center;
+}
+h1, h2, h3, button, em {
+	color: #C50019;
+}
+h1{
+	font-size: 2em;
+	border-bottom: 2px dashed;
+	padding-bottom: 20px;
+}
+h2 {
+	border-top: 2px dashed;
+	padding-top: 20px;
+	border-color: #C50019;
+}
+button {
+	color: white;
+	background-color: #C50019;
+}
+span {
+	color: #C50019;
+}
+a {
+	text-decoration: none;
+	color: #C50019;
+}
+a:hover {
+	color: #4C2200;
+}
+ header p {
+	text-decoration: none;
+	animation-timing-function: linear;
+	transition-duration: 3s;
+}
+.roule:hover {
+    -webkit-transform-origin: 0 0;/* Safari, Chrome */
+    -ms-transform-origin: 0 0; /* IE */
+    -moz-transform-origin: 0 0; /* Firefox */
+    -o-transform-origin: 0 0; /* Opera */
+    transform-origin: 50% 50%; /* La transformation partira du coin en haut à gauche */
+    
+    transform: rotate(20deg);
+    transform: scale(1.5);
+}
+.rote:hover {
+	-webkit-transform-origin: 0 0;/* Safari, Chrome */
+    -ms-transform-origin: 0 0; /* IE */
+    -moz-transform-origin: 0 0; /* Firefox */
+    -o-transform-origin: 0 0; /* Opera */
+    transform-origin: 50% 50%; /* La transformation partira du coin en haut à gauche */
+    
+    transform: rotate(20deg);
+}
+	
+
+/*_________________Bas de page___________*/
+footer {
+	text-align: center;
+	padding: 10px 40px;
+	background-image: linear-gradient(#E57373, #C50019);
+}

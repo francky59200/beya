@@ -1,0 +1,27 @@
+nav ul ul, nav ul ul ul {
+	display: none;
+	position:absolute;
+}
+nav ul >li:hover ul, nav li li:hover ul {
+	display: block;
+}
+nav ul ul ul {
+	left: 160px;
+	top: 0;
+}
+nav ul ul li {
+	text-align: left;
+	position: relative;
+}
+nav a:hover {
+	background-color: red;
+	opacity: 0.2;
+}
+header, nav ul ul {
+	background-color: #00BCD4;
+}
+nav ul ul > li:hover a {
+	background-color: blue;
+	border-bottom: 1px solid;
+	opacity: 0.2;
+}
