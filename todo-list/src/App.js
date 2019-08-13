@@ -19,10 +19,11 @@ handleCompt = () =>{
 
 handleDelete =() =>{
   const suppr = this.state.client.slice();
-  const index = suppr.findIndex((client)=> client);
+  const index = suppr.findIndex((client)=> client === client);
   suppr.splice(index, 1);
   this.setState({client:suppr});
 }
+
 
   render () {
     const clients= this.state.client.map((client) =><li>{client}<button onClick={() =>this.handleDelete(client)}>x</button></li>);
