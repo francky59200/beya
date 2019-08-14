@@ -26,7 +26,7 @@ handleAdd =(event)=>{
 
 handleChange =(event) =>{
   event.preventDefault();
-  this.setState({nouveauClient:event.currentTarget.value}, ()=>console.log(this.state.nouveauClient));
+  this.setState({nouveauClient:event.currentTarget.value});
 }
 
 
