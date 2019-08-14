@@ -3,40 +3,70 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
+
   state ={
-    client: [
-      "jean",
-      "noemie",
-      "patrick"
-    ],
+    clients: [],
     compteur: 0,
     nouveauClient:""
   }
+
+
 handleCompt = () =>{
  const chrono =this.state.compteur +1;
  this.setState({compteur:chrono});
 }
 
-handleDelete =() =>{
-  const suppr = this.state.client.slice();
-  const index = suppr.findIndex((client)=> client);
-  suppr.splice(index, 1);
-  this.setState({client:suppr});
+handleAdd =(event)=>{
+  event.preventDefault();
+ const clients= this.state.clients.slice();
+ clients.push(this.state.nouveauClient);
+ this.setState({clients:clients, nouveauClient:""}, () =>console.log(this.state.clients));
+
+}
+
+handleChange =(event) =>{
+  event.preventDefault();
+  this.setState({nouveauClient:event.currentTarget.value}, ()=>console.log(this.state.nouveauClient));
 }
 
 
+handleDelete =(id) =>{
+  const suppr = this.state.clients.slice();
+  const index = suppr.indexOf(id);
+  suppr.splice(index, 1);
+  this.setState({clients:suppr});
+}
+
+
+
   render () {
-    const clients= this.state.client.map((client) =><li>{client}<button onClick={() =>this.handleDelete(client)}>x</button></li>);
+    const membres = [
+      <li className="list-group-item">noemie</li>,
+      <li className="list-group-item">rachel</li>,
+      <li className="list-group-item">julien</li>
+    ];
+    const title= "Todo List";
+    const elements= this.state.clients.map((client) =><li className="list-group-item">{client}<button className="btn btn-success" onClick={()=>this.handleDelete(client)}>x</button></li>)
   return (
+    <div className="container">
     <div className="App">
-      <li>{this.state.client}</li>
-      {clients}
-      {this.state.compteur}<button onClick={this.handleCompt}>compteur</button>
-      <form>
-        <input type="text" placeholder="nouveau client"></input>
-          <button>Ajouter</button>
+      <h1>{title}</h1>
+      {this.state.compteur}<button className="btn btn-success" onClick={this.handleCompt}>compteur</button>
+      <div className="list-group">
+      {membres}
+       {elements}
+      </div>
+      <form
+      onSubmit={this.handleAdd}>
+        <input
+        value={this.state.nouveauClient} 
+        type="text" placeholder="nouveau client"
+         onChange={this.handleChange}
+        />
+          <button className="btn btn-primary">Ajouter</button>
       </form>
       
+    </div>
     </div>
   );
   }
