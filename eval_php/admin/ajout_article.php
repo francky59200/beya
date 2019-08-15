@@ -2,7 +2,7 @@
 session_start();
 require "../database.php";
 
-// *** Initialisation des variables à zéro pour afficher les champs vides ***
+
 $titre = '';
 $desc='';
 $image='';
