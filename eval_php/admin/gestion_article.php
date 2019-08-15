@@ -2,7 +2,7 @@
 session_start();
 require "../database.php";
 
-// *** Afficher tous les articles ***
+// *** Afficher tous les articles***
 $query=$bdd->prepare(
 	"SELECT id,titre, description, image, date_creation, publie, nb_visites, nb_comm
 	FROM articles");
