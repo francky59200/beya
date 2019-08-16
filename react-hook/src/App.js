@@ -4,20 +4,23 @@ import Counter from './Counter';
 import Form from "./Form";
 
 
-const App= (props) => {
+const App= (props) => { // pour faire le hook on utulise un composant fonctionnel declarer en const
 
-  const [clients, setClients]= useState([])
+
+  const [clients, setClients]= useState([]) // useState est un tableau comprenant 2 variables qui est
+
+  // tab[0] =clients qui est le state et la tab[1] qui est le changement du state (setState)
     
 
 const handleDelete =(id) =>{
-  const updatedClients = clients.slice();
-  const index = updatedClients.findIndex(client => client.id ===id);
-  updatedClients.splice(index, 1);
-  setClients(updatedClients);
+  const updatedClients = clients.slice();// on declare une nouvelle const qui fera la copie du tableau clients de l'useState
+  const index = updatedClients.findIndex(client => client.id ===id); // on recupére l'index
+  updatedClients.splice(index, 1);// on supprime
+  setClients(updatedClients);// et on utulise le setClients pour executer le rendu du tableau
 }
 
 const handleAdd = (client) =>{
-  const updatedClients= clients.slice();
+  const updatedClients= clients.slice();// 
   updatedClients.push(client);
   setClients(updatedClients);
  
@@ -39,7 +42,7 @@ const handleAdd = (client) =>{
     <div className="container">
     <div className="App">
       <h1>{title}</h1>
-      <Counter />
+      <Counter /> 
       <div className="list-group">
       {membres}
        {elements}
