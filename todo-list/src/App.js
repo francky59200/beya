@@ -29,9 +29,9 @@ handleChange =(event) =>{
 }
 
 
-handleDelete =(id) =>{
+handleDelete =(client) =>{
   const suppr = this.state.clients.slice();
-  const index = suppr.indexOf(id);
+  const index = suppr.indexOf(client);
   suppr.splice(index, 1);
   this.setState({clients:suppr});
 }
