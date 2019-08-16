@@ -12,9 +12,9 @@ const App= (props) => { // pour faire le hook on utulise un composant fonctionne
   // tab[0] =clients qui est le state et la tab[1] qui est le changement du state (setState)
     
 
-const handleDelete =(id) =>{
+const handleDelete =(client) =>{
   const updatedClients = clients.slice();// on declare une nouvelle const qui fera la copie du tableau clients de l'useState
-  const index = updatedClients.findIndex(client => client.id ===id); // on recupére l'index
+  const index = updatedClients.indexOf(client); // on recupére l'index
   updatedClients.splice(index, 1);// on supprime
   setClients(updatedClients);// et on utulise le setClients pour executer le rendu du tableau
 }
@@ -34,7 +34,7 @@ const handleAdd = (client) =>{
       <li className="list-group-item">julien</li>
     ];
     const title= "Todo List";
-    const elements=clients.map((client) =><li className="list-group-item">{client}<button className="btn btn-success" onClick={handleDelete}>x</button></li>)
+    const elements=clients.map((client) =><li className="list-group-item">{client}<button className="btn btn-success" onClick={()=>handleDelete(client)}>x</button></li>)
   
   
   
