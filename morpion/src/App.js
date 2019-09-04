@@ -42,7 +42,7 @@ class Board extends React.Component {// composant parent qui gére le state et r
     let status;
     const winner= calculateWinner(this.state.squares);// ici on gére l'affichage du nom du gagnant si le calculateWinner renvoie square[a];
     if (winner){
-      status='le gagnant est ' + winner; // alors il y'a un gagnant
+      status='le gagnant est ' + winner; // alors il y'a un gagnant car la condition renvoie true grace la faonction calculateWinner
     }
     else{
       status='le prochain joueur est ' + (this.state.xIsNesxt ? 'X' : 'O');// sinon on recommence une condition pour contuinuer le jeu
