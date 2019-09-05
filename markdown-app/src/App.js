@@ -8,6 +8,25 @@ class App extends Component {
   state={
     text: sampleText
   }
+  
+// pour faire une sauvegarde de notre application on va utuliser les cycles de vie de react ces cycles sont effectifs seulement dans une class react
+
+  componentDidMount(){ // le composant lorsque application est monté
+    console.log('je suis monté')
+    const text=localStorage.getItem('text') // on recupére les données sauveagardé
+    if (text){ // on met une condition s'il ya du text dans l'input
+      this.setState({text}) // alors a l'actualisation on affiche ce texte sauvegardé 
+    }
+    else{
+      this.setState({text: sampleText})// sinon on remet le text de sampleText
+    }
+  }
+
+  componentDidUpdate(){// le composant lorsque l'application est mise a jour
+    const {text} =this.state // on recupére le state 
+    localStorage.setItem('text', text)// et on le sauvegarde
+  }
+
 
   handleChange= e =>{ // comme dab cette fonction permet de changer le contenu de linput
     let text= { ...this.state.text}// on destructure le slice (copie du text)
