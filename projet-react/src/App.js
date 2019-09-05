@@ -60,7 +60,7 @@ class  App extends Component {
 
     const liste= Object.keys(famille) // une boucle de la famille avec la methode map
                 .map(membre => (<Membre 
-                  key={membre} // toujours rajouter une cléà une boucle pour l'identification 
+                  key={membre} // toujours rajouter une cléà une boucle pour l'identification
                   nomCache={() => this.changeNom(membre)}
                   age={famille[membre].age}
                   nom={famille[membre].nom}/>))
