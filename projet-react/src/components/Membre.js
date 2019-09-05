@@ -1,12 +1,13 @@
 import React, {Fragment} from 'react'
 
-const Membre =({nom, children, age}) =>{// ici on a directement intégrer le nom de la props dans le parametre de la fonction
+const Membre =({nom, children, age, nomCache}) =>{// ici on a directement intégrer le nom de la props dans le parametre de la fonction
     const name = nom // recupération d'une props
   return (
         <Fragment>
             <h2 style={{
             backgroundColor : age < 10 ? 'blue' : 'yellow', // style css inline avec condition ternaire
-            color : age < 10 ? "white" : "black"}} >{name.toUpperCase()} : {age}</h2> 
+            color : age < 10 ? "white" : "black"}} >{name.toUpperCase()} : {age}</h2>
+            <button onClick={nomCache}>X</button>
             <p>{children}</p>
         </Fragment>
     )

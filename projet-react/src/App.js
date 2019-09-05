@@ -44,6 +44,12 @@ class  App extends Component {
 
   }
 
+  changeNom = id=>{
+    const famille= { ...this.state.famille}
+    famille[id].nom= 'X'
+    this.setState({famille})
+  }
+
   handleDescription = ()=>{// ici on cree une fonction qui va gerer le bouton show
     const isShow= !this.state.isShow// on cree une variable qui aura une valeur differente du state au clic
     this.setState({isShow})// et on l'actualise
@@ -51,26 +57,27 @@ class  App extends Component {
 
   render(){
     const {famille, isShow} = this.state // on destructure les éléments du state
+
+    const liste= Object.keys(famille) // une boucle de la famille avec la methode map
+                .map(membre => (<Membre 
+                  key={membre} // toujours rajouter une cléà une boucle pour l'identification 
+                  nomCache={() => this.changeNom(membre)}
+                  age={famille[membre].age}
+                  nom={famille[membre].nom}/>))
+
+
   return (
     
     <div className="App">
       <h2 className="text">Entraînement React</h2>
       <input type="text" value={famille.membre1.nom} onChange={this.handleChange} />
-      <Membre 
-      nom={famille.membre1.nom}
-      age={famille.membre1.age}/>
-      <Membre 
-      nom={famille.membre2.nom}
-      age={famille.membre2.age}/>
-      <Membre 
-      nom={famille.membre3.nom}
-      age={famille.membre3.age}/>
+      {liste}
       <Membre 
       nom={famille.membre4.nom}
       age={famille.membre4.age}>
-        {isShow ? <strong>Je suis un gentil chien</strong> : null} 
+        {isShow ? <strong>Je suis un gentil chien</strong> : null} {/* rendu conditionnel au clic du bouton*/}
         <button style={{backgroundColor: "blue", borderRadius: "40px", fontSize: "20px"}} 
-        onClick={this.handleDescription} >{isShow ? 'Cacher' : 'Montrer'}</button>
+        onClick={this.handleDescription} >{isShow ? 'Cacher' : 'Montrer'}</button> {/*rendu conditionnel au clic*/}
       </Membre>
       <Button vieillir ={() =>this.handleClick(2)}/> 
     </div>
@@ -86,3 +93,6 @@ export default App;
 // <Membre /> contient en son sein une pops children en plus d'être une props elle même.
 
 // le button vieillir a une fonction fléché car il a un paramétre sinon il executera une boucle infini
+
+// si on veut utiliser un rendu conditionnel complexe avec des if et else if il faut le faire dans le render et non dans le jsx(return)
+// dans le jsx on utilise la condition ternaire et pour appeler sa condition effectuer dans le render on utulise {"nom de la condition"}
