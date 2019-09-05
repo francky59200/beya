@@ -36,10 +36,10 @@ class  App extends Component {
   }
 
   handleChange = event => {
-    const famille= { ...this.state.famille}
-    const nom = event.target.value
-    famille.membre1.nom= nom
-    this.setState({nom : famille})
+    const famille= { ...this.state.famille}// destructuration de la copie du state.
+    const nom = event.target.value// on recupere la valeur de l'input
+    famille.membre1.nom= nom// on lui affecte le nom ecrit sur l'input
+    this.setState({nom : famille})// et on change le state
 
   }
 
