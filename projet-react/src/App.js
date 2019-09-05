@@ -26,7 +26,8 @@ const famille ={
 class  App extends Component {
 
   state ={
-    famille
+    famille,
+    isShow: false
   }
 
   handleClick= num =>{
@@ -43,8 +44,13 @@ class  App extends Component {
 
   }
 
+  handleDescription = ()=>{// ici on cree une fonction qui va gerer le bouton show
+    const isShow= !this.state.isShow// on cree une variable qui aura une valeur differente du state au clic
+    this.setState({isShow})// et on l'actualise
+  }
+
   render(){
-    const {famille} = this.state
+    const {famille, isShow} = this.state // on destructure les éléments du state
   return (
     
     <div className="App">
@@ -62,7 +68,9 @@ class  App extends Component {
       <Membre 
       nom={famille.membre4.nom}
       age={famille.membre4.age}>
-        <strong>Je suis un gentil chien</strong>
+        {isShow ? <strong>Je suis un gentil chien</strong> : null} 
+        <button style={{backgroundColor: "blue", borderRadius: "40px", fontSize: "20px"}} 
+        onClick={this.handleDescription} >{isShow ? 'Cacher' : 'Montrer'}</button>
       </Membre>
       <Button vieillir ={() =>this.handleClick(2)}/> 
     </div>
