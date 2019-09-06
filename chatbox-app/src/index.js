@@ -24,3 +24,10 @@ ReactDOM.render(<Root />, document.getElementById('root'))
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 serviceWorker.unregister()
+
+// dans cet index.js on a importer react router pour gerer l'affichage des pages
+// on cree une constante root qui sera la nouvelle appli
+// on creer une balise englobante <BrowserRouter> a l'interieur on fait un switch des pages
+// avec la balise <Route>
+
+//
