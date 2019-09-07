@@ -6,7 +6,7 @@
 .anim-enter-active{
     opacity: 1;
     transform: scale(1) translateY(-50%);
-    transition: all 2000ms ease-out;
+    transition: all 200ms ease-out;
 }
 
 .anim-exit{
@@ -17,6 +17,6 @@
 .anim-exit-active{
     opacity: 0.01;
     transform: scale(0.9) translateY(-50%);
-    transition: all 2000ms ease-out;
+    transition: all 200ms ease-out;
 
 }

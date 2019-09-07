@@ -9,7 +9,7 @@ import './Animations.css'
 import base from './base'
 
 // Animations
-
+// nous importons l'api de react transition group pour gerer les animations a l'ntrée et sortie du DOM
 import {CSSTransition, TransitionGroup} from 'react-transition-group'
 
 class App extends Component {
@@ -46,10 +46,10 @@ class App extends Component {
     const messages= { ...this.state.messages} // une copie du tableau
     messages[`message-${Date.now()}`]= message // un timeStamp pour une clé unique de chaque message
 
-    // faire la limite de message a 8 affiché
+    // faire la limite de message a 5 affiché
     Object
       .keys(messages) // on prend la clé qui est message
-      .slice(0, -8) // on le limite a 8 messages a afficher sinon on lui donne null
+      .slice(0, -5) // on le limite a 5 messages a afficher sinon on lui donne null
       .forEach(key => { // on fait une boucle forEach avec la clé message
         messages[key] = null // et la clé du message a supprimer passera a null pour le supprimer a firebase
       })
@@ -64,10 +64,10 @@ class App extends Component {
   //en reprenant la clé du message et du pseudo mise a jour dans le state
     const messages = Object.keys(this.state.messages) 
                      .map(key => (
-                      <CSSTransition
-                       timeout={2000}
-                       classNames='anim'
-                       Key={key}>
+                      <CSSTransition //ON affecte une balise transition sur la clé de cjhaque message 
+                       timeout={200} // on temps pour l'animation
+                       classNames='anim'// sa classNames qui est different de className et sa clé
+                       key={key}>
                       <Message
                       isUser={this.isUser} //ici on applique la props qui a été envoyé a message.js
                       message={this.state.messages[key].message}
@@ -76,8 +76,9 @@ class App extends Component {
     console.log(messages)
     return (
       <div className='box'>
+        <h1>Ma chatbox</h1>
         <div>
-          <TransitionGroup className='message'ref={this.messageRef}>
+          <TransitionGroup className='message'ref={this.messageRef}> {/* et dans le jsx on affecte la TransitionGroup*/}
             
               {messages}
             </TransitionGroup>

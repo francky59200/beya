@@ -54,7 +54,10 @@ body {
 	max-width: 500px;
 	height: calc(100vh - 100px);
 	padding: 50px 0;
-	/*border: 5px solid purple;*/
+	border: 2px solid purple;
+}
+h1{
+	text-align: center;
 }
 
 .box > * {
@@ -73,6 +76,7 @@ body {
 	max-height: calc(100vh - 310px);
 	overflow-y: scroll;
 	-webkit-overflow-scrolling:touch;
+	
 }
 
 .messages::-webkit-scrollbar {
@@ -91,6 +95,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	padding: 0 10px;
 }
 
 .message > * {
