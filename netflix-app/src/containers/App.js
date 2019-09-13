@@ -3,6 +3,7 @@ import './App.css';
 import SearchBar from '../components/search-bar'
 import VideoList from './video-list'
 import axios from 'axios'
+import VideoDetail from '../components/video-detais';
 
 
 // Nos api provenance themoviedb
@@ -19,9 +20,10 @@ class App extends React.Component {
 
   componentWillMount(){
     axios.get(`${POPULAR_MOVIES_URL}&${API_KEY}`).then(response=>{ // on appele le module axios requête ajax et on lui prend sa reponse
-      this.setState({movieList:response.data.results.slice(0,6)}) // on met a jour le state de la liste des films populaires a afficher 6 films
+      let movieList=response.data.results.slice(0,6)// on recupére une liste de 6 films a afficher
+      let currentMovie=response.data.results[0] // on récupére le film le plus récent.
+      this.setState({movieList, currentMovie}) // on met a jour le state pour la liste des films et le film populaire
       console.log(this.state.movieList)
-      this.setState({currentMovie:response.data.results[0]})// on met a jour le state pour mettre en avant le film le plus populaire
       console.log(this.state.currentMovie)
     })
   }
@@ -32,6 +34,7 @@ class App extends React.Component {
         <div className="App">
           <SearchBar/>
           <VideoList/>
+          <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview}/>
         </div>
     )
       
