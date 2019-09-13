@@ -30,10 +30,17 @@ class App extends React.Component {
 
 
   render(){
+    // avec l'appel ajax la videoList est retourné 2 fois une fois vide et une fois avec les 6 films
+    //pour eviter cela on creer une fonction avec une condition pour qu'elle ne renoie que le tableau avec les 6 elts
+    const renderVideoList =()=>{
+      if(this.state.movieList.length>=6){
+        return <VideoList movieList={this.state.movieList}/>
+      }
+    }
     return(
         <div className="App">
           <SearchBar/>
-          <VideoList/>
+          {renderVideoList()}
           <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview}/>
         </div>
     )
