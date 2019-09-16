@@ -60,10 +60,14 @@ class App extends React.Component {
     }
     return(
         <div className="App">
-          <SearchBar/>
-          {renderVideoList()}
-          <Video videoId={this.state.currentMovie.videoId}/>
-          <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview}/>
+          <div className="first-videos">
+            <SearchBar/>
+            <Video videoId={this.state.currentMovie.videoId}/>
+            <VideoDetail title={this.state.currentMovie.title} description={this.state.currentMovie.overview}/>
+          </div>
+          <div className="second-videos">
+             {renderVideoList()}
+          </div>
         </div>
     )
       

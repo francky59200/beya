@@ -1,4 +1,5 @@
 import React from 'react'
+import '../containers/App.css'
 
 const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500" // cette constance permet de convertir path pour l'image
 

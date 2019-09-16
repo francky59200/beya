@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import '../containers/App.css'
 
 class SearchBar extends Component {
 
@@ -14,7 +15,7 @@ class SearchBar extends Component {
         return(
             <div className="search">
                 <input onChange={this.handleChange} placeholder={this.state.placeHolder}/>
-                <button>Rechercher</button>
+                <button><strong>Rechercher</strong></button>
             </div>
         )
     }
