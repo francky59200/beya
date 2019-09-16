@@ -10,12 +10,15 @@ class SearchBar extends Component {
     handleChange =(e)=>{
         this.setState({searchText:e.currentTarget.value})
     }
+    handleClick=(e)=>{
+       this.props.callback(this.state.searchText)
+    }
 
     render(){
         return(
             <div className="search">
                 <input onChange={this.handleChange} placeholder={this.state.placeHolder}/>
-                <button><strong>Rechercher</strong></button>
+                <button onClick={this.handleClick}><strong>Rechercher</strong></button>
             </div>
         )
     }

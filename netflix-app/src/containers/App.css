@@ -59,6 +59,11 @@ li {
   list-style-type: none;
   display: flex;
   margin-bottom: 15px;
+  cursor: pointer;
+}
+
+li:hover{
+  background: whitesmoke;
 }
 
 li img{
@@ -70,7 +75,7 @@ li img{
 }
 
 ul {
-  border: 2px solid #e5e5e5;
+  border: 1px solid #ffc107 ;
 }
 
 

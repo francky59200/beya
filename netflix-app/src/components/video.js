@@ -6,7 +6,7 @@ const BASE_URL="https://www.youtube.com/embed/"
 const Video=({videoId})=>{
     return (
         <div>
-            <iframe width="600" height="400" src={`${BASE_URL}${videoId}`} frameborder="0" allowfullscreen/>
+            <iframe width="600" height="400" src={`${BASE_URL}${videoId}`}/>
         </div>
     )
 }
