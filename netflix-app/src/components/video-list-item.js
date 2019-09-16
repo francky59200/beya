@@ -6,8 +6,8 @@ const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500" // cette constance perm
 const VideoListItem=(props)=>{
     const {movie}=props
 
-    function handleClick(){
-        props.callback(movie)
+    function handleClick(){ // props envoyé par l'enfant au parent sous forme de callback
+        props.callback(movie)// props callback avec le paramétre movie
     }
     return(
         <li onClick={handleClick}>

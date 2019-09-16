@@ -13,7 +13,7 @@ class SearchBar extends Component {
     /*****barre de recherche façon google et au click************* */
 
     handleChange =(e)=>{
-        this.setState({searchText:e.currentTarget.value})
+        this.setState({searchText:e.currentTarget.value})// on met a jour le state avec la nouvelle valeur e.current.target.value
         if(!this.state.lockRequest){ // si la requête est vrai
             this.setState({lockRequest:true})// on déverouille pour afficher le resultat
             setTimeout(()=>{this.search()}, this.state.intervalBeforeRequest)// et on applique un setTimeout le temps de la recherche

@@ -1,6 +1,8 @@
 import React from 'react'
 import '../containers/App.css'
 
+// details de la video currentMovie
+
 const VideoDetail =({title, description})=>{
 return(
         <div className="details">

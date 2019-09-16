@@ -7,7 +7,7 @@ import VideoDetail from '../components/video-detais';
 import Video from '../components/video'
 
 
-// Nos constantes api provenance themoviedb
+// Nos constantes api provenance themoviedb decoupé en plusieurs sous-api 
 
 const API_END_POINT = "https://api.themoviedb.org/3/"
 const POPULAR_MOVIES_URL = "discover/movie?language=fr&sort_by=popularity.desc&include_adult=false&append_to_response=images"
@@ -55,9 +55,9 @@ class App extends React.Component {
     //avec le this.applyVideoToCurrentMovie
     // cette fonction est flèché pour eviter de binder notre methode.
    onClickList=(movie)=>{
-     this.setState({currentMovie : movie}, function(){
-      this.applyVideoToCurrentMovie()
-      this.setRecommandations()
+     this.setState({currentMovie : movie}, function(){ // mise a jour du state et appel d'une fonction callback
+      this.applyVideoToCurrentMovie()// application de la fonction vidéo
+      this.setRecommandations()// application des recommandations
     })
    }
 
