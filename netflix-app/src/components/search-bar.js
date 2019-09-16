@@ -5,14 +5,29 @@ class SearchBar extends Component {
 
     state={
         searchText:"",
-        placeHolder:"Tapez votre film..."
+        placeHolder:"Tapez votre film...",
+        intervalBeforeRequest:1000, // intervall ppour soumettre la requête
+        lockRequest: false //verrouillage lors de la soumission de la requête par defaut deverouiller poor la saisie
     }
+
+    /*****barre de recherche façon google******** */
+
     handleChange =(e)=>{
         this.setState({searchText:e.currentTarget.value})
+        if(!this.state.lockRequest){ // si la requête est vrai
+            this.setState({lockRequest:true})// on déverouille pour afficher le resultat
+            setTimeout(()=>{this.search()}, this.state.intervalBeforeRequest)// et on applique un setTimeout le temps de la recherche
+        }
     }
-    handleClick=(e)=>{
-       this.props.callback(this.state.searchText)
+    handleClick=()=>{
+      this.search()
     }
+
+    search=()=>{
+        this.props.callback(this.state.searchText)// ici on envoie le callback a App grace au props
+        this.setState({lockRequest:false}) // et des que la requête est faites on déverouille 
+    }
+    
 
     render(){
         return(
