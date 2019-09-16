@@ -10,7 +10,7 @@ class SearchBar extends Component {
         lockRequest: false //verrouillage lors de la soumission de la requête par defaut deverouiller poor la saisie
     }
 
-    /*****barre de recherche façon google******** */
+    /*****barre de recherche façon google et au click************* */
 
     handleChange =(e)=>{
         this.setState({searchText:e.currentTarget.value})
@@ -27,7 +27,7 @@ class SearchBar extends Component {
         this.props.callback(this.state.searchText)// ici on envoie le callback a App grace au props
         this.setState({lockRequest:false}) // et des que la requête est faites on déverouille 
     }
-    
+
 
     render(){
         return(
