@@ -61,14 +61,15 @@ class App extends React.Component {
     })
    }
 
+   // fonction pour la barre de recherche 
    onClickSearch=(searchText)=>{
-    if(searchText){
-      axios.get(`${API_END_POINT}${SEARCH_URL}&${API_KEY}&query=${searchText}`).then(response=>{
-        if(response.data && response.data.results[0]){
-          if(response.data.results[0].id !== this.state.currentMovie.id){
-            this.setState({currentMovie:response.data.results[0]}, () => {
-              this.applyVideoToCurrentMovie();
-              this.setRecommandations();
+    if(searchText){ //si la barre de recherche est vérifié
+      axios.get(`${API_END_POINT}${SEARCH_URL}&${API_KEY}&query=${searchText}`).then(response=>{ // requête ajax
+        if(response.data && response.data.results[0]){// s'il y'a une reponse et une premiere
+          if(response.data.results[0].id !== this.state.currentMovie.id){// et si cette reponse est differente du state.currentMovie
+            this.setState({currentMovie:response.data.results[0]}, () => {// on met a jour le state avec cette reponse
+              this.applyVideoToCurrentMovie();// et on lui applique la video
+              this.setRecommandations(); // et les recommandations pour cette video
         })
           }
         }
@@ -76,9 +77,11 @@ class App extends React.Component {
     }
    }
 
+
+   // fonction pour les recommandations des videos
    setRecommandations=()=>{
-    axios.get(`${API_END_POINT}movie/${this.state.currentMovie.id}/recommendations?${API_KEY}&language=fr`).then(response=>{
-      this.setState({movieList:response.data.results.slice(0,6)})
+    axios.get(`${API_END_POINT}movie/${this.state.currentMovie.id}/recommendations?${API_KEY}&language=fr`).then(response=>{ //requête ajax
+      this.setState({movieList:response.data.results.slice(0,6)})//et on modifie le state avec les recommandations de la video dans le currentMovie
     })
    }
 
