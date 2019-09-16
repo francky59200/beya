@@ -1,31 +1,29 @@
-
-/*-------style de l'app et des deux types de vidéos-------*/
-
-html{
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+html {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cfd9df), to(#e2ebf0));
+  background-image: linear-gradient(to top, #cfd9df 0, #e2ebf0 100%);
 }
 
-.App{
+.App {
   margin: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  
 }
 
-.first-videos{
+.first-videos {
   text-align: center;
   width: 65%;
 }
-.second-videos{
+
+.second-videos {
   width: 30%;
 }
 
-/***************Style de la search bar******************/
-.search{
-    margin-bottom: 30px;
-    transition: .5s;
+.search {
+  margin-bottom: 30px;
 }
 
-.search input{
+.search input {
   width: 400px;
   height: 28px;
   border-radius: 25px 0 0 25px;
@@ -33,48 +31,72 @@ html{
   outline: none;
   font-size: 20px;
   padding: 0 20px;
-  transition: 5s;
 }
 
-.search button{
+.search button {
   border-radius: 0 25px 25px 0;
   width: 100px;
   height: 30px;
- padding-top: 8px;
- padding-bottom: 2px;
- cursor: pointer;
- background: #ffc107;
- text-align: center;
- 
+  padding-top: 8px;
+  padding-bottom: 2px;
+  cursor: pointer;
+  background: #ffc107;
+  text-align: center;
 }
 
-.search button:hover{
+.search button:hover {
   background: #ff5722;
 }
 
-/*-------------style des videos listes****************/
-
 li {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 15px;
   cursor: pointer;
 }
 
-li:hover{
+li:hover {
   background: whitesmoke;
 }
 
-li img{
+li img {
   padding-top: 10px;
   width: 168px;
   height: 94px;
   margin-right: 20px;
-  box-shadow: 3px 3px 3px black;
+  -webkit-box-shadow: 3px 3px 3px black;
+          box-shadow: 3px 3px 3px black;
 }
 
 ul {
-  border: 1px solid #ffc107 ;
+  border: 1px solid #ffc107;
 }
 
-
+@media screen and (max-width: 1000px) {
+  .App {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .details {
+    text-align: center;
+    margin-left: 80px;
+  }
+  h3 {
+    width: 45px;
+  }
+  ul {
+    border: none;
+  }
+  li {
+    text-align: center;
+    margin: 20px 135px;
+  }
+}
+/*# sourceMappingURL=App.css.map */
