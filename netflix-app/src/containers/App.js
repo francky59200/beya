@@ -65,7 +65,7 @@ class App extends React.Component {
    onClickSearch=(searchText)=>{
     if(searchText){ //si la barre de recherche est vérifié
       axios.get(`${API_END_POINT}${SEARCH_URL}&${API_KEY}&query=${searchText}`).then(response=>{ // requête ajax
-        if(response.data && response.data.results[0]){// s'il y'a une reponse et une premiere
+        if(response.data && response.data.results[0]){// s'il y'a pas de reponse vide  et un premier resultat
           if(response.data.results[0].id !== this.state.currentMovie.id){// et si cette reponse est differente du state.currentMovie
             this.setState({currentMovie:response.data.results[0]}, () => {// on met a jour le state avec cette reponse
               this.applyVideoToCurrentMovie();// et on lui applique la video
