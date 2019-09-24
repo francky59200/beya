@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css'
 import { connect } from 'react-redux'
+import { selectUser } from '../actions/actions'
 
 class UserList extends Component {
     render() {
