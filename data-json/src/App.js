@@ -1,93 +1,34 @@
 import React from 'react';
 import './App.css';
-import PostData from './postdata'
-
-const DATA = [
-  {
-      "id": "LIB1",
-      "name": "Library 1",
-      "context": "C1",
-      "children": [
-          {
-              "id": "SKI1",
-              "name": "SKill 1",
-              "context": "C1",
-              "children": [
-                  {
-                      "id": "SKI11",
-                      "name": "SKill 11",
-                      "context": "C1"
-                  },
-                  {
-                      "id": "SKI12",
-                      "name": "SKill 12",
-                      "context": "C1",
-                      "children": []
-                  },
-                  {
-                      "id": "SKI13",
-                      "name": "SKill 13",
-                      "context": "C1",
-                      "children": [
-                          {
-                              "id": "SKI131",
-                              "name": "SKill 131",
-                              "context": "C1",
-                              "children": [
-                                  {
-                                      "id": "SKI1311",
-                                      "name": "SKill 1311",
-                                      "context": "C1",
-                                      "children": [
-                                          {
-                                              "id": "SKI13111",
-                                              "name": "SKill 13111",
-                                              "context": "C1"
-                                          }
-                                      ]
-                                  }
-                              ]
-                          }
-                      ]
-                  }
-              ]
-          },
-          {
-              "id": "SKI2",
-              "name": "SKill 2",
-              "context": "C1",
-              "children": [
-                  {
-                      "id": "SKI21",
-                      "name": "SKill 21",
-                      "context": "C1",
-                      "children": [
-                          null
-                      ]
-                  },
-                  {
-                      "id": "SKI22",
-                      "name": "SKill 22",
-                      "context": "C1"
-                  }
-              ]
-          }
-      ]
-  }
-]
 
 
-function App() {
-  return (
-    <div>
-      {
-        DATA.map((comment) => {
-          return (
-            <PostData key={comment.id} comment={comment} />
-          )
-        })
-      }
-    </div>
-  )
+const DATA= require('./data.json')
+
+
+// Rendu recursif de donnée json 
+
+
+const MyComponent  = ({collection}) => (
+    Array.isArray(collection) ? <ul>
+        {collection.map((item, index) => (
+            item && item.children && Array.isArray(item.children) ?
+                (
+                    <li key={index}>
+                        {item.name}
+                        {<MyComponent collection={item.children} />}
+                    </li>
+                ) : <li key={index}> {item && item.name} </li>
+        ))}
+    </ul> : null
+)
+
+class App extends React.Component {
+   render() {
+       return (
+           <MyComponent collection={DATA} />
+       )
+   }
 }
-export default App;
+
+ 
+export default App
