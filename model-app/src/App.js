@@ -58,3 +58,7 @@ class App extends Component {
 
 export default App
 
+/**************************Difference entre le setState et le prevState******************** */
+
+// lors d'un setState le dernier rendu est toujours  mise a jour et remplacera obligatoirement la derniere mise a jour
+// alors que avec le prevState 

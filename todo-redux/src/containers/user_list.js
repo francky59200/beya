@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import '../App.css'
 import { connect } from 'react-redux'
 import { selectUser } from '../actions/actions'
+import { bindActionCreators } from 'redux'
 
 class UserList extends Component {
     render() {
@@ -11,7 +12,8 @@ class UserList extends Component {
                 <ul className="col-md-3">
                     {this.props.myUser.map((user)=>{ // on boucle les elements de notre reducers avec la props myUser
                         return (
-                            <li className="list-group-item" key={user.id}>{user.name}</li>
+                            <li className="list-group-item" key={user.id} onClick={()=>this.props.selectUser(user)}>
+                            {user.name}</li>
                         )
                     })
                     }
@@ -34,5 +36,9 @@ function mapStateToProps(state){ // le lien entre notre reducer et react se fait
     }
 }
 
+function mapDispatchToProps(dispatch){
+    bindActionCreators({selectUser:selectUser},dispatch)
+}
 
-export default connect(mapStateToProps)(UserList)
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserList)
