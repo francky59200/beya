@@ -12,7 +12,7 @@ class UserList extends Component {
                 <ul className="col-md-3">
                     {this.props.myUser.map((user)=>{ // on boucle les elements de notre reducers avec la props myUser
                         return (
-                            <li className="list-group-item" key={user.id} onClick={()=>this.props.selectUser(user)}>
+                            <li className="list-group-item" key={user.id} onClick={() =>this.props.selectUser(user)}>
                             {user.name}</li>
                         )
                     })
@@ -37,8 +37,8 @@ function mapStateToProps(state){ // le lien entre notre reducer et react se fait
 }
 
 function mapDispatchToProps(dispatch){
-    bindActionCreators({selectUser:selectUser},dispatch)
+    return bindActionCreators({selectUser:selectUser},dispatch)
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserList)
+export default connect(mapStateToProps,mapDispatchToProps)(UserList)
