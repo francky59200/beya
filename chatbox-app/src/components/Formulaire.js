@@ -19,7 +19,7 @@ class Formulaire extends Component {
         this.setState({message:'', length}) // on vide le message et on actulalise la longeur du message
     }
 
-    handleSubmit = e =>{ // cette methode permet la soumission du formulaire
+    handleSubmit = e =>{ // cette methode permet de soumettre le bouton
         e.preventDefault() // on evite le chargement de la page
        this.createMessage()// et on envoie le message creer
     }
