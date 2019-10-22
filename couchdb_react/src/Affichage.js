@@ -1,14 +1,14 @@
-/*import React from 'react'
+import React from 'react'
 
-const Affichage = ({lastName, firstName, age})=>{
+const Affichage = ({nom, prenom, age})=>{
     return (
         <div>
-            <p>{lastName}</p>
-            <p>{firstName}</p>
+            <p>{nom}</p>
+            <p>{prenom}</p>
             <p>{age}</p>
         </div>
     )
 }
 
-export default Affichage*/
+export default Affichage
 
