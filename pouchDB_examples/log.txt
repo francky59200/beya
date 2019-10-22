@@ -1,0 +1,19 @@
+[Tue, 22 Oct 2019 10:59:26 GMT] [info] [<0.000.0>] pouchdb-server has started on http://127.0.0.1:5000/
+[Tue, 22 Oct 2019 10:59:26 GMT] [info] [<0.000.0>] navigate to http://127.0.0.1:5000/_utils for the Fauxton UI.
+[Tue, 22 Oct 2019 10:59:37 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/ 304
+[Tue, 22 Oct 2019 10:59:37 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/js/bundle-34997e32896293a1fa5d71f79eb1b4f7.js 304
+[Tue, 22 Oct 2019 10:59:37 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/css/styles-a9623008fc27e79da2388441deeacfab.css 304
+[Tue, 22 Oct 2019 10:59:38 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Tue, 22 Oct 2019 10:59:38 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_session 304
+[Tue, 22 Oct 2019 10:59:38 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET / 200
+[Tue, 22 Oct 2019 10:59:38 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-site.png 304
+[Tue, 22 Oct 2019 10:59:39 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fauxtonicon5.woff 304
+[Tue, 22 Oct 2019 10:59:39 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1571741978226 200
+[Tue, 22 Oct 2019 10:59:39 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?startkey=%22%22&endkey=%22%E9%A6%99%22&limit=30&_=1571741978227 200
+[Tue, 22 Oct 2019 10:59:40 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1571741978228 200
+[Tue, 22 Oct 2019 10:59:40 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1571741978229 200
+[Tue, 22 Oct 2019 10:59:40 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 200
+[Tue, 22 Oct 2019 10:59:40 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/fonts/fontawesome-webfont.woff 304
+[Tue, 22 Oct 2019 10:59:47 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_all_dbs?_=1571741978230 200
+[Tue, 22 Oct 2019 10:59:47 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_replicator?_=1571741978231 200
+[Tue, 22 Oct 2019 10:59:47 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_users?_=1571741978232 200

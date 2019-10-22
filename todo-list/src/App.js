@@ -11,8 +11,8 @@ class App extends React.Component {
 
 
 handleCompt = () =>{
- const chrono =this.state.compteur +1;
- this.setState({compteur:chrono});
+ 
+ this.setState({compteur:this.state.compteur +1}, ()=>console.log(this.state.compteur));
 }
 
 handleAdd =(event)=>{
@@ -50,7 +50,8 @@ handleDelete =(client) =>{
     <div className="container">
     <div className="App">
       <h1>{title}</h1>
-      {this.state.compteur}<button className="btn btn-success" onClick={this.handleCompt}>compteur</button>
+      <p>{this.state.compteur}</p>
+      <button className="btn btn-success" onClick={this.handleCompt}>compteur</button>
       <div className="list-group">
       {membres}
        {elements}
