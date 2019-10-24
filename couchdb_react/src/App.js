@@ -9,14 +9,7 @@ class App extends Component {
     employe:{}
   }
 
-  /*componentWilMount(){
-    axios.get('http://localhost:5984/employes', {withCredentials: true}).then(function(data){
-      console.log(data)
-    })
-
-   
-  }*/
-
+  
   // ici on va essayer de recuperer les données distant de notre base de données couchDB avec React
   // grace au pilote couchDB "nano"
 

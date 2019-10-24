@@ -2,7 +2,7 @@
 
 let PouchDB= require('pouchdb')
 
-//on creer une base de données distant
+//on creer une base distant
 
 let db = new PouchDB('http://localhost:5984/employes')
 
