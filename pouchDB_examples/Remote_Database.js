@@ -6,12 +6,28 @@ let PouchDB= require('pouchdb')
 
 let db = new PouchDB('http://localhost:5984/employes')
 
-// on recupére les données de cette base
+// on cree un document
 
-db.info(function(err,info){
+let doc={
+    name: "françois",
+    age: "35",
+    ville:"tourcoing"
+}
+
+// on insere dans la base de donnée
+
+db.post(doc, function(err, res){
+    if(err){
+       return console.log(err)
+    }else{
+        console.log("your document are added")
+    }
+})
+
+/*db.info(function(err,info){
     if(err){
         return console.log(err)
     }else{
         console.log(info)
     }
-})
+})*/
