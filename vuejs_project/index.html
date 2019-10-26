@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>vue js</title>
+</head>
+<body>
+    <h2>Application vue js</h2>
+
+    <div id="app">
+        <h3>Affichage avec v-bind ou : sur les attributs</h3>
+            
+            <a :href='link' :title='message'>{{message}}</a> <!--ici v-bind est remplacé par :-->
+
+        <h3>Rendu conditionnel avec v-if et v-else</h3>
+
+            <div class="success" v-if='success'>
+                <p>Bienvenue sur mon Application</p>
+            </div>
+            <div class="nosuccess" v-else>
+                <p>vous pouvez partir</p>
+            </div>
+
+        <h3>Faire une boucle d'un tableau v-for</h3>
+
+            <ul>
+                <li v-for='person in persons'>{{person}}</li>
+            </ul>
+
+
+    </div>
+
+    <!--le v-bind permet de faire l'interpollation de notre state dans les attributs-->
+    <!--v-if v-else permettent de faire des conditions pour le rendu conditionnel-->
+    <!--v-for permet de faire la boucle des elements-->
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
