@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>vue js</title>
 </head>
 <body>
@@ -15,10 +16,10 @@
             
             <a :href='link' :title='message'>{{message}}</a> <!--ici v-bind est remplacé par :-->
 
-        <h3>Rendu conditionnel avec v-if et v-else</h3>
+        <h3>Rendu conditionnel avec v-if et v-else, v-on pour les methods</h3>
 
             <div class="success" v-if='success'>
-                <p>Bienvenue sur mon Application</p>
+                <p class="bloc">Bienvenue sur mon Application <i @click='close' class="fas fa-times"></i></p>
             </div>
             <div class="nosuccess" v-else>
                 <p>vous pouvez partir</p>
@@ -36,6 +37,7 @@
     <!--le v-bind permet de faire l'interpollation de notre state dans les attributs-->
     <!--v-if v-else permettent de faire des conditions pour le rendu conditionnel-->
     <!--v-for permet de faire la boucle des elements-->
+    <!--v-on ou @ permet de mettre une methode ou ub évènement exemples onClick, onChange, focus-->
 
 
     
