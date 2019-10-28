@@ -14,3 +14,20 @@ new Vue({
         }
     }
 })
+
+// create a component and template
+
+Vue.component('button-count', {
+    data: function(){
+        return {
+            count: 0
+        }
+    },
+    template: `<div>
+    <p>{{count}}</p>
+    <button @click="count++">vous avez cliqué</button>
+    </div>`
+
+})
+
+new Vue({ el: '#counter'})
